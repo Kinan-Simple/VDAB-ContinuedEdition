@@ -1,0 +1,53 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "bambi-confused",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "OKAY, fine you win. Unfortunately, I lost. So you now can go"
+		},
+{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "normal",
+			"text": "Wait, okay I need a little bit of time to talk with Dave for a moment"
+		},
+{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambi-confused",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Oh, BF, I see you wanna go for another round. What do you say?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Well, don't waste our time, okay? Dave gave us little time, so this will be the last."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambi-confused",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Well, it was nice. but since this would be the last until you guys come back here again. Now that things are off of the way, How about another song BF while we spend your little time before you go?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Beep bop!"
+		}
+	]
+}

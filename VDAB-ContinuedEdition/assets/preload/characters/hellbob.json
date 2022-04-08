@@ -1,0 +1,94 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-122,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bobismad"
+		},
+		{
+			"offsets": [
+				-122,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"name": "bobismad"
+		},
+		{
+			"offsets": [
+				-122,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				10,
+				11,
+				12
+			],
+			"name": "bobismad"
+		},
+		{
+			"offsets": [
+				-122,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				40,
+				41,
+				42
+			],
+			"name": "bobismad"
+		},
+		{
+			"offsets": [
+				-122,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				54,
+				55,
+				56
+			],
+			"name": "bobismad"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/hellbob",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "hellbob",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		70,
+		70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

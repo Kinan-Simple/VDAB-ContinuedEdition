@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bombu.png"><SubTexture name="bombu idle0000" x="0" y="0" width="1004" height="754" frameX="0" frameY="0" frameWidth="1004" frameHeight="754" />
+<SubTexture name="bombu idle0001" x="1004" y="0" width="1004" height="754" frameX="0" frameY="0" frameWidth="1004" frameHeight="754" />
+<SubTexture name="bombu idle0002" x="2008" y="0" width="1004" height="754" frameX="0" frameY="0" frameWidth="1004" frameHeight="754" />
+<SubTexture name="bombu idle0003" x="3012" y="0" width="1004" height="754" frameX="0" frameY="0" frameWidth="1004" frameHeight="754" />
+<SubTexture name="bombu idle0004" x="0" y="754" width="1004" height="754" frameX="0" frameY="0" frameWidth="1004" frameHeight="754" />
+<SubTexture name="bombu down0000" x="1004" y="754" width="1004" height="787" frameX="0" frameY="0" frameWidth="1004" frameHeight="787" />
+<SubTexture name="bombu down0001" x="2008" y="754" width="1004" height="787" frameX="0" frameY="0" frameWidth="1004" frameHeight="787" />
+<SubTexture name="bombu down0002" x="3012" y="754" width="1004" height="787" frameX="0" frameY="0" frameWidth="1004" frameHeight="787" />
+<SubTexture name="bombu left0000" x="0" y="1541" width="1004" height="742" frameX="0" frameY="0" frameWidth="1004" frameHeight="742" />
+<SubTexture name="bombu left0001" x="1004" y="1541" width="1004" height="742" frameX="0" frameY="0" frameWidth="1004" frameHeight="742" />
+<SubTexture name="bombu left0002" x="2008" y="1541" width="1004" height="742" frameX="0" frameY="0" frameWidth="1004" frameHeight="742" />
+<SubTexture name="bombu right0000" x="3012" y="1541" width="1004" height="725" frameX="0" frameY="0" frameWidth="1004" frameHeight="725" />
+<SubTexture name="bombu right0001" x="0" y="2283" width="1004" height="725" frameX="0" frameY="0" frameWidth="1004" frameHeight="725" />
+<SubTexture name="bombu right0002" x="1004" y="2283" width="1004" height="725" frameX="0" frameY="0" frameWidth="1004" frameHeight="725" />
+<SubTexture name="bombu up0000" x="2008" y="2283" width="1004" height="798" frameX="0" frameY="0" frameWidth="1004" frameHeight="798" />
+<SubTexture name="bombu up0001" x="3012" y="2283" width="1004" height="798" frameX="0" frameY="0" frameWidth="1004" frameHeight="798" />
+<SubTexture name="bombu up0002" x="0" y="3081" width="1004" height="798" frameX="0" frameY="0" frameWidth="1004" frameHeight="798" />
+</TextureAtlas>

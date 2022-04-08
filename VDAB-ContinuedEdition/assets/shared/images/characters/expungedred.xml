@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="expunged.png"><SubTexture name="expunged idle0000" x="1177" y="0" width="226" height="514" frameX="0" frameY="0" frameWidth="226" frameHeight="514" />
+<SubTexture name="expunged idle0001" x="922" y="550" width="213" height="520" frameX="0" frameY="0" frameWidth="213" frameHeight="520" />
+<SubTexture name="expunged idle0002" x="718" y="550" width="204" height="526" frameX="0" frameY="0" frameWidth="204" frameHeight="526" />
+<SubTexture name="expunged singDOWN0000" x="0" y="550" width="248" height="536" frameX="0" frameY="0" frameWidth="248" frameHeight="536" />
+<SubTexture name="expunged singDOWN0001" x="248" y="550" width="261" height="531" frameX="0" frameY="0" frameWidth="261" frameHeight="531" />
+<SubTexture name="expunged singLEFT0000" x="509" y="550" width="209" height="528" frameX="0" frameY="0" frameWidth="209" frameHeight="528" />
+<SubTexture name="expunged singLEFT0001" x="966" y="0" width="211" height="538" frameX="0" frameY="0" frameWidth="211" frameHeight="538" />
+<SubTexture name="expunged singRIGHT0000" x="0" y="0" width="262" height="550" frameX="0" frameY="0" frameWidth="262" frameHeight="550" />
+<SubTexture name="expunged singRIGHT0001" x="262" y="0" width="282" height="546" frameX="0" frameY="0" frameWidth="282" frameHeight="546" />
+<SubTexture name="expunged singUP0000" x="544" y="0" width="211" height="544" frameX="0" frameY="0" frameWidth="211" frameHeight="544" />
+<SubTexture name="expunged singUP0001" x="755" y="0" width="211" height="541" frameX="0" frameY="0" frameWidth="211" frameHeight="541" />
+</TextureAtlas>

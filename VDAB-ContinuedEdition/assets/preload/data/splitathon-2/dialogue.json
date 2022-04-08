@@ -1,0 +1,81 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You are good XML."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "But i invited some friends to sing with us!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "So I think,why we dont do a 20 minute showndown?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bee-"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambisplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "HEY DAVE CAN I SING AFTER YOU SECTION?!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Sure Bambi..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambisplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "YEAH"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambisplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I AM GONNA SING >:)"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Alright, let's settle this!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "beep bop skdop bah"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Okay! Lest sing now!"
+		}
+	]
+}

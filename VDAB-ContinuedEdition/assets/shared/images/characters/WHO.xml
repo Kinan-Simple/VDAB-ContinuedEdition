@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="WHO.png">
+<SubTexture name="the0000" x="0" y="0" width="332" height="733" frameX="0" frameY="0" frameWidth="332" frameHeight="733" />
+</TextureAtlas>

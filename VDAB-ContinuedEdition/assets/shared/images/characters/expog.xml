@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="expog.png"><SubTexture name="expog idle0000" x="0" y="0" width="523" height="312" frameX="0" frameY="0" frameWidth="523" frameHeight="312" />
+<SubTexture name="expog right0000" x="523" y="0" width="568" height="491" frameX="0" frameY="0" frameWidth="568" frameHeight="491" />
+<SubTexture name="expog down0000" x="0" y="491" width="529" height="335" frameX="0" frameY="0" frameWidth="529" frameHeight="335" />
+<SubTexture name="expog left0000" x="529" y="491" width="480" height="488" frameX="0" frameY="0" frameWidth="480" frameHeight="488" />
+<SubTexture name="expog up0000" x="0" y="979" width="518" height="346" frameX="0" frameY="0" frameWidth="518" frameHeight="346" />
+</TextureAtlas>

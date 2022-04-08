@@ -1,0 +1,92 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "c",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "œ攡顆ģƅ╚¢░→Ù£W֕VV#",
+			"boxState": "normal",
+			"sound": "click",
+			"speed": 0.025,
+			"portrait": "loginbambprint"
+		},
+		{
+			"expression": "talk",
+			"text": "boi what the hell boi",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.04,
+			"sound": ""
+		},
+		{
+			"expression": "excited",
+			"text": "®t1 yŒÒ’2Q1Yö™6MFïõvÙë€wÊÕüi¤aCÂ¼oO ‹W¢Ô54J}rkhjJnÍÁÊThïb kUC”uÈŠµM2zdÔ·ô$Û‡=É6p§´´@—{¤  @JŠG;EÊ‹ÒØ‘ÒüniéÊ“ŠùÒ.\\nïì¯ªÙ,k7VVU",
+			"boxState": "normal",
+			"portrait": "loginbambprint",
+			"speed": 0.005,
+			"sound": "click"
+		},
+		{
+			"expression": "talk",
+			"text": "????",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "\"sectionNotes\": [],\t\t\t\t\"typeOfSection\": 0,\t\t\t\t\"lengthInSteps\": 16,\t\t\t\t\"gfSection\": false,\t\t\t\t\"altAnim\": false,\t\t\t\t\"mustHitSection\": false,\t\t\t\t\"changeBPM\": false,\t\t\t\t\"bpm\": 240\t\t\t},\t\t\t{\t\t\t\t\"sectionNotes\": [],\t\t\t\t\"typeOfSection\": 0,\t\t\t\t\"lengthInSteps\": 16,",
+			"boxState": "normal",
+			"portrait": "loginbambprint",
+			"speed": 0.00500000000000001,
+			"sound": "click"
+		},
+		{
+			"expression": "talk",
+			"text": "re>",
+			"boxState": "normal",
+			"portrait": "loginbambprint",
+			"speed": 0.05,
+			"sound": "click"
+		},
+		{
+			"sound": "click",
+			"speed": 0.00500000000000001,
+			"portrait": "loginbambprint",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "{\t\t\t\t\"lengthInSteps\": 16,\t\t\t\t\"typeOfSection\": 0,\t\t\t\t\"sectionNotes\": [\t\t\t\t\t[\t\t\t\t\t\t31219.512195122,\t\t\t\t\t\t2,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t31463.4146341463,\t\t\t\t\t\t2,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t31707.3170731707,\t\t\t\t\t\t1,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t31829.2682926829,\t\t\t\t\t\t3,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t31951.2195121951,\t\t\t\t\t\t1,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32073.1707317073,\t\t\t\t\t\t3,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32195.1219512195,\t\t\t\t\t\t0,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32317.0731707317,\t\t\t\t\t\t2,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32439.0243902439,\t\t\t\t\t\t1,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32560.9756097561,\t\t\t\t\t\t0,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32682.9268292683,\t\t\t\t\t\t3,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32804.8780487805,\t\t\t\t\t\t1,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t32926.8292682927,\t\t\t\t\t\t2,\t\t\t\t\t\t0\t\t\t\t\t],\t\t\t\t\t[\t\t\t\t\t\t33048.7804878049,\t\t\t\t\t\t3,\t\t\t\t\t\t0\t\t\t\t\t]\t\t\t\t],\t\t\t\t\"altAnim\": false,\t\t\t\t\"gfSection\": false,\t\t\t\t\"bpm\": 123,\t\t\t\t\"changeBPM\": false,\t\t\t\t\"mustHitSection\": false\t\t\t}"
+		},
+		{
+			"expression": "talk",
+			"text": "'Succesfully$20generated%20#1'",
+			"boxState": "normal",
+			"portrait": "loginbambprint",
+			"speed": 0.045,
+			"sound": "click"
+		},
+		{
+			"expression": "talk",
+			"text": "literally what thef uck",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "l>startCountdown()",
+			"boxState": "normal",
+			"portrait": "loginbambprint",
+			"speed": 0.001,
+			"sound": "click"
+		}
+	]
+}

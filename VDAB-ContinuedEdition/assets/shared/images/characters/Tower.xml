@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="towerSheet.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Down0000" x="0" y="0" width="416" height="1023" pivotX="0" pivotY="0"/>
+	<SubTexture name="Down0001" x="416" y="0" width="416" height="1023"/>
+	<SubTexture name="Down0002" x="832" y="0" width="416" height="1023"/>
+	<SubTexture name="Idle0000" x="1248" y="0" width="416" height="1023" pivotX="0" pivotY="0"/>
+	<SubTexture name="Idle0001" x="1664" y="0" width="416" height="1023"/>
+	<SubTexture name="Idle0002" x="2080" y="0" width="416" height="1023"/>
+	<SubTexture name="Left0000" x="2496" y="0" width="684" height="1099" pivotX="134.5" pivotY="38.7"/>
+	<SubTexture name="Left0001" x="3180" y="0" width="684" height="1099"/>
+	<SubTexture name="Left0002" x="0" y="1099" width="684" height="1099"/>
+	<SubTexture name="Right0000" x="684" y="1099" width="824" height="1110" pivotX="204.85" pivotY="43.85"/>
+	<SubTexture name="Right0001" x="1508" y="1099" width="824" height="1110"/>
+	<SubTexture name="Right0002" x="2332" y="1099" width="824" height="1110"/>
+	<SubTexture name="Up0000" x="3156" y="1099" width="416" height="1092" pivotX="0" pivotY="34"/>
+	<SubTexture name="Up0001" x="3572" y="1099" width="416" height="1092"/>
+	<SubTexture name="Up0002" x="0" y="2209" width="416" height="1092"/>
+	<SubTexture name="Up0003" x="416" y="2209" width="416" height="1092"/>
+</TextureAtlas>

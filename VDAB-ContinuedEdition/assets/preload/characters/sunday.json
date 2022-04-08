@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				540,
+				-249
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "sunday guitar idle"
+		},
+		{
+			"offsets": [
+				540,
+				-249
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "sunday guitar idle"
+		},
+		{
+			"offsets": [
+				584,
+				-256
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "sunday guitar alt left"
+		},
+		{
+			"offsets": [
+				514,
+				-260
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "sunday guitar alt right"
+		},
+		{
+			"offsets": [
+				710,
+				-280
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "sunday guitar alt down"
+		},
+		{
+			"offsets": [
+				650,
+				-256
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "sunday guitar alt up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sunday_guitar_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				163,
+				42
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "bamber down"
+		},
+		{
+			"offsets": [
+				204,
+				541
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singUP",
+			"loop": false,
+			"name": "bamber up"
+		},
+		{
+			"offsets": [
+				39,
+				461
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "bamber right"
+		},
+		{
+			"offsets": [
+				221,
+				330
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "idle",
+			"loop": false,
+			"name": "bamber idle"
+		},
+		{
+			"offsets": [
+				470,
+				567
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "bamber left"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/bamber",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bamber",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		138,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

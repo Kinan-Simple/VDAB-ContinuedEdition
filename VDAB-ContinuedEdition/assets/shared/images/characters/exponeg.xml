@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bamber.png">
+<SubTexture name="HELP0000" x="0" y="0" width="204" height="526" frameX="0" frameY="0" frameWidth="204" frameHeight="526" />
+</TextureAtlas>

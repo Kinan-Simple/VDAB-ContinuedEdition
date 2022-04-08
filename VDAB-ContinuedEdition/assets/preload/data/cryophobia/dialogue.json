@@ -1,0 +1,123 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "                                       "
+		},
+		{
+			"speed": 0.18,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "..."
+		},
+		{
+			"speed": 0.085,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "so... you finally arrived, dont you remember your old friend?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Old friend?..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "wait... dont tell me you are..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "you are correct, Im am Dave."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "WHAT HAPPEND TO YOU?!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "nothing much. i just want to say that i have a deal for you."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "A deal?.."
+		},
+		{
+			"speed": 0.12,
+			"portrait": "Zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yes. a deal."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "you win - i send you to the one, who is messing up with our reality."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "and if i win..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i think you already know what will happen, right?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "i-im in."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "zamn",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "then lets begin. 2 songs from me."
+		}
+	]
+}
