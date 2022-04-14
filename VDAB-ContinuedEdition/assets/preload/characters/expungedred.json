@@ -65,14 +65,14 @@
 	"healthicon": "redxpoong",
 	"flip_x": false,
 	"healthbar_colors": [
-		221,
-		64,
-		64
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		0,
 		0
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 2.3
 }

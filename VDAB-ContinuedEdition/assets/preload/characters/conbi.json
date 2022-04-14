@@ -65,9 +65,9 @@
 	"healthicon": "conbi",
 	"flip_x": false,
 	"healthbar_colors": [
-		1,
-		1,
-		1
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		-140,

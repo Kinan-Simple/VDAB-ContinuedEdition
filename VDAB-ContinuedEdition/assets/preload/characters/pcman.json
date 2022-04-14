@@ -146,9 +146,9 @@
 	"healthicon": "bombu_alpha",
 	"flip_x": false,
 	"healthbar_colors": [
-		80,
-		100,
-		100
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		-430,

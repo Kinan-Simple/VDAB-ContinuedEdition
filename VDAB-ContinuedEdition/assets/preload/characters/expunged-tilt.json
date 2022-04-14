@@ -21,7 +21,7 @@
 	"healthicon": "bambiExpunged",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
+		200,
 		0,
 		0
 	],

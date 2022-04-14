@@ -140,9 +140,9 @@
 	"healthicon": "bambi",
 	"flip_x": false,
 	"healthbar_colors": [
+		200,
 		0,
-		215,
-		20
+		0
 	],
 	"camera_position": [
 		0,

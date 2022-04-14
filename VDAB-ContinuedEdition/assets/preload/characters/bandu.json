@@ -140,9 +140,9 @@
 	"healthicon": "bandu",
 	"flip_x": false,
 	"healthbar_colors": [
+		200,
 		0,
-		215,
-		40
+		0
 	],
 	"camera_position": [
 		-140,

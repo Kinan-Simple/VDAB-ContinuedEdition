@@ -140,9 +140,9 @@
 	"healthicon": "dave3d",
 	"flip_x": false,
 	"healthbar_colors": [
-		240,
-		140,
-		160
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		30,

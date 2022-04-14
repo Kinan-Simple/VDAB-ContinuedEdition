@@ -65,8 +65,8 @@
 	"healthicon": "bambiPISSED",
 	"flip_x": false,
 	"healthbar_colors": [
+		200,
 		0,
-		255,
 		0
 	],
 	"camera_position": [

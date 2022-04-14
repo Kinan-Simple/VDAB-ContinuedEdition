@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="EarthBi.png"><SubTexture name="EarthBi up0000" x="0" y="0" width="143" height="243" frameX="0" frameY="-7" frameWidth="144" frameHeight="250" />
+<SubTexture name="EarthBi left0000" x="286" y="0" width="132" height="184" frameX="-7" frameY="0" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi right0000" x="418" y="0" width="194" height="183" frameX="-6" frameY="-2" frameWidth="200" frameHeight="185" />
+<SubTexture name="EarthBi idle0000" x="286" y="184" width="122" height="3" frameX="-20" frameY="-182" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0001" x="143" y="235" width="141" height="6" frameX="-1" frameY="-179" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0002" x="570" y="575" width="142" height="10" frameX="0" frameY="-175" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0003" x="428" y="575" width="142" height="18" frameX="0" frameY="-167" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0004" x="286" y="575" width="142" height="29" frameX="0" frameY="-156" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0005" x="612" y="534" width="142" height="39" frameX="0" frameY="-146" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0006" x="143" y="185" width="142" height="50" frameX="0" frameY="-135" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0007" x="418" y="183" width="143" height="59" frameX="0" frameY="-126" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0008" x="143" y="575" width="143" height="66" frameX="0" frameY="-119" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0009" x="0" y="575" width="143" height="76" frameX="0" frameY="-109" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0010" x="612" y="450" width="143" height="84" frameX="0" frameY="-101" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0011" x="612" y="354" width="143" height="96" frameX="0" frameY="-89" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0012" x="612" y="247" width="143" height="107" frameX="0" frameY="-78" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0013" x="612" y="128" width="143" height="119" frameX="0" frameY="-66" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0014" x="612" y="0" width="143" height="128" frameX="0" frameY="-57" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0015" x="429" y="419" width="143" height="135" frameX="0" frameY="-50" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0016" x="286" y="419" width="143" height="142" frameX="0" frameY="-43" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0017" x="143" y="419" width="143" height="149" frameX="0" frameY="-36" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0018" x="0" y="419" width="143" height="156" frameX="0" frameY="-29" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0019" x="286" y="243" width="143" height="164" frameX="0" frameY="-21" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0020" x="143" y="243" width="143" height="170" frameX="0" frameY="-15" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0021" x="0" y="243" width="143" height="176" frameX="0" frameY="-9" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi down0000" x="429" y="243" width="143" height="161" frameX="0" frameY="-9" frameWidth="144" frameHeight="185" />
+<SubTexture name="EarthBi idle0022" x="143" y="0" width="143" height="185" frameX="0" frameY="0" frameWidth="144" frameHeight="185" />
+</TextureAtlas>

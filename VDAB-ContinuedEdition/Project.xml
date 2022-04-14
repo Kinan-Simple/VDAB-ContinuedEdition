@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-    <app title="Friday Night Funkin' | Vs Dave And Bambi Continued Edition: V2.5" file="VDABCE" packageName="com.vdabdet.vdabde" package="com.vdabdet.vdabde" main="Main" version="2.5.0" company="Kinan And The Definitive Edition Team" />
+    <app title="Friday Night Funkin' | VS Dave & Bambi Continued Edition: V3.0 Beta" file="3.0 BETA" packageName="com.vdabdet.vdabde" package="com.vdabdet.vdabde" main="Main" version="3.0.0" company="Kinan And The Definitive Edition Team" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />

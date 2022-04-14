@@ -70,16 +70,16 @@ class PlayState extends MusicBeatState
 	public static var characteroverride:String = "none";
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Shit', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['you suck lol!', 0.2], //From 0% to 19%
+		['sheesh', 0.4], //From 20% to 39%
+		['bda', 0.5], //From 40% to 49%
+		['bruj', 0.6], //From 50% to 59%
+		['hm', 0.69], //From 60% to 68%
+		['???', 0.7], //69%
+		['good', 0.8], //From 70% to 79%
+		['gh', 0.9], //From 80% to 89%
+		['cool', 1], //From 90% to 99%
+		['omg so flippy!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -155,7 +155,7 @@ class PlayState extends MusicBeatState
 
 	var isDadGlobal:Bool = true;
 
-	var funnyFloatyBoys:Array<String> = ['dave-3d', 'bambi-3d', 'bambi-unfair', 'expunged', 'bambi-piss-3d', 'bambi-scaryooo', 'bambi-god', 'bambi-god2d', 'bambi-hell', 'bombu'];
+	var funnyFloatyBoys:Array<String> = ['dave-3d', 'bambi-3d', 'bambi-unfair', 'expunged', 'bambi-piss-3d', 'bambi-scaryooo', 'bambi-god', 'bambi-god2d', 'bambi-hell', 'bombu', 'conbi'];
 	var funnyBanduFloaty:Array<String> = ['bandu'];
 	var funnySideFloatyBoys:Array<String> = ['bombu'];
 	var canSlide:Bool = true;
@@ -643,6 +643,79 @@ class PlayState extends MusicBeatState
 				UsingNewCam = true;
 			}
 
+
+			case 'manbi_is_dead':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'manbi_is_dead';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('extrabg/manbi_is_dead'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
+			case 'null':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'null';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('null/null'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
+			case 'earthbg':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'earthbg';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('extrabg/earthbg'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
 			case 'bensonbg':
 			{
 				defaultCamZoom = 0.85;
@@ -664,7 +737,31 @@ class PlayState extends MusicBeatState
 				#end
 
 				UsingNewCam = true;
-			}		
+			}
+
+
+			case 'banbg':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'banbg';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('extrabg/banbg'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
 
 
 			case 'bamberHell':
@@ -1944,6 +2041,12 @@ class PlayState extends MusicBeatState
 				credits = 'HOW AM I F*** YOU!?!?!?!?!?!?';
 			case 'golden':
 				credits = 'OC Made By joolian And Austin!';	
+			case 'corn-theft':
+				credits = 'Remix Made By JamixerDev!';
+			case 'phonophobia':
+				credits = 'TURN OFF MIDDLESCROLL IMMEDIATELY!	';				
+			case 'corn-theft-but-awesome':
+				credits = 'Remix Made By JamixerDev!';									
 			case 'rano' | 'shredder':
 				credits = 'Chart Made By RythmShadow!';
 			case 'splitathon-2':
@@ -1976,7 +2079,7 @@ class PlayState extends MusicBeatState
 		SONG.song
 		+ " "
 		+ (curSong.toLowerCase() != 'splitathon' ? (storyDifficulty == 3 ? "- FINALE" : storyDifficulty == 2 ? "- HARD" : storyDifficulty == 1 ? "- NORMAL" : "- EASY") : "- FINALE")
-		+ " - V2.5", 16);
+		+ " - V3.0", 16);
 		//+ " ", 16);
 		songWatermark.setFormat(Paths.font("comic-sans.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songWatermark.scrollFactor.set();
@@ -2095,7 +2198,7 @@ class PlayState extends MusicBeatState
 					{
 						camHUD.visible = true;
 						remove(blackScreen);
-						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 3.0, {
 							ease: FlxEase.quadInOut,
 							onComplete: function(twn:FlxTween)
 							{
@@ -2411,7 +2514,7 @@ class PlayState extends MusicBeatState
 			}
 			for (i in 0...opponentStrums.length) {
 				setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
-				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
+				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);	
 				if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
@@ -3118,7 +3221,7 @@ class PlayState extends MusicBeatState
 				{
 				var krunkThing = 60;
 	
-				poop.alpha = Math.sin(elapsedtime) / 2.5 + 0.4;
+				poop.alpha = Math.sin(elapsedtime) / 3.0 + 0.4;
 	
 				playerStrums.forEach(function(spr:FlxSprite)
 				{
@@ -3577,15 +3680,15 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'NPS: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: 0% | N/A';
+			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: 0% | O/S';
 		} else {
-			scoreTxt.text = 'NPS: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Math.floor(ratingPercent * 100) + '% | ' + ratingFC;
+			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Math.floor(ratingPercent * 100) + '% | ' + ratingFC;
 		}
 		if(cpuControlled) {
-			scoreTxt.text = 'Cheater! | BotPlay ';
+			scoreTxt.text = 'I am Gonna Disable ur mom | BotPlay ';
 		}
 		if(practiceMode) {
-			scoreTxt.text = 'NPS: ' + nps + ' | Combo Breaks: ' + songMisses + ' | Practice Mode ';
+			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Combo Breaks: ' + songMisses + ' | Practica Mod ';
 		}
 
 		if(cpuControlled) {
@@ -5986,12 +6089,33 @@ class PlayState extends MusicBeatState
 
 		var funny:Float = (healthBar.percent * 0.01) + 0.01;
 
-		//icon squish funny haha
-		iconP1.setGraphicSize(Std.int(iconP1.width + (50 * (2 - funny))),Std.int(iconP1.height - (25 * (2 - funny))));
-		iconP2.setGraphicSize(Std.int(iconP2.width + (50 * (2 - funny))),Std.int(iconP2.height - (25 * (2 - funny))));
+		//health icon bounce lol no lag real
+		if (curBeat % gfSpeed == 0) {
+			curBeat % (gfSpeed * 2) == 0 ? {
+				iconP1.scale.set(1.1, 0.8);
+				iconP2.scale.set(1.1, 1.3);
 
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+				FlxTween.angle(iconP1, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+				FlxTween.angle(iconP2, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+			} : {
+				iconP1.scale.set(1.1, 1.3);
+				iconP2.scale.set(1.1, 0.8);
+
+				FlxTween.angle(iconP2, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+				FlxTween.angle(iconP1, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+			}
+
+			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+
+			iconP1.updateHitbox();
+			iconP2.updateHitbox();
+		}
+
+		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
+		{
+			gf.dance();
+		}
 
 		if(curBeat % 2 == 0) {
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))

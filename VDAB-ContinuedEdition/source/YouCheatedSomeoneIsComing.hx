@@ -21,7 +21,7 @@ class YouCheatedSomeoneIsComing extends MusicBeatState
 	override public function create():Void 
 	{
 		super.create();
-		var spooky:FlxSprite = new FlxSprite(0, 0).loadGraphic('dave/cheater_lol');
+		var spooky:FlxSprite = new FlxSprite(0, 0).loadGraphic('ahh/jay_shlatt');
         spooky.screenCenter();
         add(spooky);
 		FlxG.sound.playMusic(Paths.music('badEnding'),1,true);

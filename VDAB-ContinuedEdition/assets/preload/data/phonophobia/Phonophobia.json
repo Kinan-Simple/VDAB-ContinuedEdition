@@ -68065,6 +68065,46 @@
 				"bpm": 261
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 261,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 261,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 261
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 261
+			},
+			{
 				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -68088,11 +68128,11 @@
 		"player2": "bambi-god2d",
 		"player3": "gf",
 		"song": "Phonophobia",
-		"stage": "nil",
+		"stage": "null",
 		"needsVoices": true,
 		"validScore": true,
 		"arrowSkin": "polynote",
 		"bpm": 261,
-		"speed": 3.9
+		"speed": 34.8780899493188
 	}
 }

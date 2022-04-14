@@ -25,8 +25,8 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = 'Bamber n David Engine'; //This is also used for Discord RPC
-	public static var curModVer:String = 'V2.5'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = 'No dad? Engine'; //This is also used for Discord RPC
+	public static var curModVer:String = 'V3.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -57,7 +57,9 @@ class MainMenuState extends MusicBeatState
 		'backgrounds/mamakotomi',
 		'backgrounds/T5mpler',
 		'backgrounds/gmaing',
-		'backgrounds/m'				
+		'backgrounds/m',
+		'backgrounds/aadyian when white',
+		'backgrounds/whenthe engine be like'				
 	];
 
 	override function create()
@@ -197,7 +199,7 @@ class MainMenuState extends MusicBeatState
 				{
 					if (optionShit[curSelected] == 'donate')
 					{
-						CoolUtil.browserLoad('https://gamebanana.com/mods/43201');
+						CoolUtil.browserLoad('https://drive.google.com/file/d/1YFSdsaYciaUFKI3P7HmeGKY68NXeYkCD');
 					}
 					else
 					{

@@ -65,9 +65,9 @@
 	"healthicon": "bamber",
 	"flip_x": false,
 	"healthbar_colors": [
+		200,
 		0,
-		138,
-		255
+		0
 	],
 	"camera_position": [
 		0,

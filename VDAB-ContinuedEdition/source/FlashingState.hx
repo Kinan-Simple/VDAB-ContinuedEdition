@@ -24,7 +24,7 @@ class FlashingState extends MusicBeatState
 		add(bg);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, Thanks for downloading this mod!\nBear in mind this is a Beta Build.\nStuff Like purgatory are not fully finished\nand some stuff isnt there like the random scroll speeds in unfairness\nEnding Screens, Character selection screen and the Freeplay cutscenes option.
+			"Hey, Thanks for downloading this mod!\nBear in mind this is 3.0.\nStuff Like purgatory are gonna be updated\nand some stuff isnt there like the random scroll speeds in unfairness\nEnding Screens, Character selection screen and the Freeplay cutscenes option.
 			Press Enter to continue!",
 			32);
 		warnText.setFormat("Comic Sans MS Bold", 32, FlxColor.WHITE, CENTER);

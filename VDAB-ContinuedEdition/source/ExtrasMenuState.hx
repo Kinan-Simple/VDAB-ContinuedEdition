@@ -25,14 +25,14 @@ using StringTools;
 
 class ExtrasMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.4.2 - VsDaveDE'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '3.0.0 - VDABCE'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['awards', 'credits', 'discord'];
+	var optionShit:Array<String> = ['awards', 'credits', 'youtube'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -50,7 +50,11 @@ class ExtrasMenuState extends MusicBeatState
 		'backgrounds/morie',
 		'backgrounds/mantis',
 		'backgrounds/mamakotomi',
-		'backgrounds/T5mpler'
+		'backgrounds/T5mpler',
+		'backgrounds/gmaing',
+		'backgrounds/m',
+		'backgrounds/aadyian when white',
+		'backgrounds/whenthe engine be like'
 	];
 
 	override function create()
@@ -173,9 +177,9 @@ class ExtrasMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 				{
-					if (optionShit[curSelected] == 'donate')
+					if (optionShit[curSelected] == 'youtube')
 					{
-						CoolUtil.browserLoad('https://discord.gg/vsdave');
+						CoolUtil.browserLoad('https://www.youtube.com/channel/UC-_sZF3LthRrwKYW1CSqUMg');
 					}
 					else
 					{

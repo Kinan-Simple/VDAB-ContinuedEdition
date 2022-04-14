@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "EarthBi idle"
+		},
+		{
+			"offsets": [
+				5,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "EarthBi left"
+		},
+		{
+			"offsets": [
+				-10,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "EarthBi down"
+		},
+		{
+			"offsets": [
+				-29,
+				72
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "EarthBi up"
+		},
+		{
+			"offsets": [
+				-48,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "EarthBi right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/EarthBi",
+	"position": [
+		80,
+		180
+	],
+	"healthicon": "earthBi",
+	"flip_x": false,
+	"healthbar_colors": [
+		200,
+		0,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 6.19999999999999
+}

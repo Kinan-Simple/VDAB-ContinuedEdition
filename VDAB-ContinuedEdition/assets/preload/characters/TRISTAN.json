@@ -208,7 +208,7 @@
 	"healthicon": "tristan",
 	"flip_x": true,
 	"healthbar_colors": [
-		255,
+		200,
 		0,
 		0
 	],

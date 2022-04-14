@@ -65,7 +65,7 @@
 	"healthicon": "bambiHell",
 	"flip_x": false,
 	"healthbar_colors": [
-		155,
+		200,
 		0,
 		0
 	],

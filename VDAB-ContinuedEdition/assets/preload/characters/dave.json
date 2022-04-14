@@ -140,9 +140,9 @@
 	"healthicon": "dave",
 	"flip_x": false,
 	"healthbar_colors": [
-		35,
-		82,
-		206
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		70,

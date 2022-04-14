@@ -81,9 +81,9 @@
 	"healthicon": "bambiGod2d",
 	"flip_x": false,
 	"healthbar_colors": [
+		200,
 		0,
-		255,
-		140
+		0
 	],
 	"camera_position": [
 		10,

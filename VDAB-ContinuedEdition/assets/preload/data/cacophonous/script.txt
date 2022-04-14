@@ -1,0 +1,7 @@
+function onSongStart()
+	noteTweenX("NoteMove", 0, 10, 0.1, cubeInOut)
+end
+
+function onStepHit()
+	if curStep == 2 then
+	noteTweenAngle("NoteAngle", 0, 10, 0.1, linear)

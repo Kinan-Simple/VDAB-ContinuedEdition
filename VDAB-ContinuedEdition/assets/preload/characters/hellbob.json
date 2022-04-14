@@ -81,7 +81,7 @@
 	"healthicon": "hellbob",
 	"flip_x": true,
 	"healthbar_colors": [
-		0,
+		200,
 		0,
 		0
 	],

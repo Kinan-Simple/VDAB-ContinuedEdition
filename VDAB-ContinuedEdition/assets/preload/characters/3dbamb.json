@@ -65,9 +65,9 @@
 	"healthicon": "3dbamb",
 	"flip_x": false,
 	"healthbar_colors": [
-		24,
-		188,
-		57
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		0,

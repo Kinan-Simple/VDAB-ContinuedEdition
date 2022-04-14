@@ -109,9 +109,9 @@
 	"healthicon": "bf-pixel",
 	"flip_x": true,
 	"healthbar_colors": [
-		123,
-		214,
-		246
+		102,
+		255,
+		51
 	],
 	"camera_position": [
 		50,

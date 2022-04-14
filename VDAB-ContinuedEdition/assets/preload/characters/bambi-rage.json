@@ -65,9 +65,9 @@
 	"healthicon": "bambiRage",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
+		200,
 		0,
-		20
+		0
 	],
 	"camera_position": [
 		-10,

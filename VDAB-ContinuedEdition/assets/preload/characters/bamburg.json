@@ -140,9 +140,9 @@
 	"healthicon": "bamburg",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		195,
-		20
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		250,

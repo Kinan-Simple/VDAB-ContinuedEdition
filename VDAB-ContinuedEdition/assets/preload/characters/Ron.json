@@ -65,9 +65,9 @@
 	"healthicon": "ron",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		235,
-		15
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		20,

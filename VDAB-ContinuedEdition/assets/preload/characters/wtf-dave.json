@@ -76,9 +76,9 @@
 	"healthicon": "davesharted",
 	"flip_x": false,
 	"healthbar_colors": [
-		215,
-		142,
-		166
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		-30,

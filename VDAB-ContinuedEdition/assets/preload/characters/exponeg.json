@@ -65,9 +65,9 @@
 	"healthicon": "expoong",
 	"flip_x": false,
 	"healthbar_colors": [
-		64,
-		64,
-		64
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		0,

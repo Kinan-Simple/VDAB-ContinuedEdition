@@ -208,9 +208,9 @@
 	"healthicon": "tristan",
 	"flip_x": true,
 	"healthbar_colors": [
+		102,
 		255,
-		0,
-		0
+		51
 	],
 	"camera_position": [
 		70,

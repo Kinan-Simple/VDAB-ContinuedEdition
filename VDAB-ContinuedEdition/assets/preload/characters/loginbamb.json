@@ -65,9 +65,9 @@
 	"healthicon": "loginbamb",
 	"flip_x": true,
 	"healthbar_colors": [
-		166,
-		183,
-		255
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		0,

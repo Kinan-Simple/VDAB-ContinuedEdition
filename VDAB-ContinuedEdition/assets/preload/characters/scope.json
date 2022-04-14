@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "sco idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sco",
+	"position": [
+		-20,
+		0
+	],
+	"healthicon": "death",
+	"flip_x": false,
+	"healthbar_colors": [
+		200,
+		0,
+		0
+	],
+	"camera_position": [
+		-210,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 3.1
+}

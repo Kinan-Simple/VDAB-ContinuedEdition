@@ -65,9 +65,9 @@
 	"healthicon": "bob",
 	"flip_x": true,
 	"healthbar_colors": [
-		255,
-		255,
-		255
+		200,
+		0,
+		0
 	],
 	"camera_position": [
 		70,

@@ -25,7 +25,7 @@ class CheaterState extends FlxState
 
 		#if windows
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("CHEATER FUCK YOU", StringTools.replace(PlayState.SONG.song, '-', ' '));
+		DiscordClient.changePresence("FUCK OFF BITCH", StringTools.replace(PlayState.SONG.song, '-', ' '));
 		#end
 
 		var end:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dave/fuckyouscreen', 'shared'));
