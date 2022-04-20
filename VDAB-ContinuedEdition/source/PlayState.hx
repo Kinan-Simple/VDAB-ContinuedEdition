@@ -70,16 +70,16 @@ class PlayState extends MusicBeatState
 	public static var characteroverride:String = "none";
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['you suck lol!', 0.2], //From 0% to 19%
-		['sheesh', 0.4], //From 20% to 39%
-		['bda', 0.5], //From 40% to 49%
-		['bruj', 0.6], //From 50% to 59%
-		['hm', 0.69], //From 60% to 68%
-		['???', 0.7], //69%
-		['good', 0.8], //From 70% to 79%
-		['gh', 0.9], //From 80% to 89%
-		['cool', 1], //From 90% to 99%
-		['omg so flippy!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['You Suck!', 0.2], //From 0% to 19%
+		['Shit', 0.4], //From 20% to 39%
+		['Bad', 0.5], //From 40% to 49%
+		['Bruh', 0.6], //From 50% to 59%
+		['Meh', 0.69], //From 60% to 68%
+		['Nice', 0.7], //69%
+		['Good', 0.8], //From 70% to 79%
+		['Great', 0.9], //From 80% to 89%
+		['Sick!', 1], //From 90% to 99%
+		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -139,6 +139,8 @@ class PlayState extends MusicBeatState
 	public var vocals:FlxSound;
 
 	public var dad:Character;
+	public var dad2:Character;
+	public var dad3:Character;
 	//private var dadmirror:Character;
 	public var gf:Character;
 	//private var core:Character;
@@ -155,9 +157,9 @@ class PlayState extends MusicBeatState
 
 	var isDadGlobal:Bool = true;
 
-	var funnyFloatyBoys:Array<String> = ['dave-3d', 'bambi-3d', 'bambi-unfair', 'expunged', 'bambi-piss-3d', 'bambi-scaryooo', 'bambi-god', 'bambi-god2d', 'bambi-hell', 'bombu', 'conbi'];
+	var funnyFloatyBoys:Array<String> = ['dave-3d', 'bambi-3d', 'bambi-unfair', 'expunged', 'bambi-piss-3d', 'bambi-scaryooo', 'bambi-god', 'bambi-god2d', 'bambi-hell', 'bombu'];
 	var funnyBanduFloaty:Array<String> = ['bandu'];
-	var funnySideFloatyBoys:Array<String> = ['bombu'];
+	var funnySideFloatyBoys:Array<String> = ['bombu', 'badai', 'bamburg', 'poip', 'f_you'];
 	var canSlide:Bool = true;
 
 	public var notes:FlxTypedGroup<Note>;
@@ -268,6 +270,10 @@ class PlayState extends MusicBeatState
 	var grpLimoParticles:FlxTypedGroup<BGSprite>;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
+	var devaExpunged:FlxSprite;
+	var devaLaptop:FlxSprite;
+	var devaBurger:FlxSprite;
+	var redTunnel:FlxSprite;
 
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
@@ -384,7 +390,7 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
-		whiteflash = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.WHITE);
+		whiteflash = new FlxSprite(-400, -400).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.WHITE);
 		whiteflash.scrollFactor.set();
 
 		blackScreen = new FlxSprite(-120, -120).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 150), FlxColor.BLACK);
@@ -440,7 +446,7 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'house' | 'insanity' | 'supernovae':
 					curStage = 'houseDay';
-				case 'old-house' | 'old-insanity':
+				case 'old-house' | 'old-insanity' | 'beta-house' | 'beta-insanity':
 					curStage = 'houseOlderDay';
 				case 'bonus-song' | 'glitch':
 					curStage = 'houseNight';
@@ -455,8 +461,8 @@ class PlayState extends MusicBeatState
 				case 'disposition':
 					curStage = 'bambersHell';
 				case 'old-furiosity':
-					curStage = 'oldRed';
-				case 'cheating' | 'disruption':
+					curStage = '3dRed';
+				case 'cheating':
 					curStage = '3dGreen';
 				case 'technology':
 					curStage = '3dBombuboi';
@@ -464,6 +470,10 @@ class PlayState extends MusicBeatState
 					curStage = '3dScary';
 				case 'opposition':
 					curStage = '3dFucked';
+				case 'beefin':
+					curStage = '3dBurger';
+				case 'devastation':
+					curStage = '3dDevastation';
 				default:
 					curStage = 'stage';
 			}
@@ -620,6 +630,124 @@ class PlayState extends MusicBeatState
 
 			UsingNewCam = true;
 
+		case '3dRed':
+			{
+				defaultCamZoom = 0.85;
+				curStage = '3dRed';
+
+				redSky.loadGraphic(Paths.image('dave/redsky'));
+				redSky.antialiasing = true;
+				redSky.scrollFactor.set(0.6, 0.6);
+				redSky.active = true;
+
+				add(redSky);
+
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				redSky.shader = testshader.shader;
+				curbg = redSky;
+				#end
+
+				//redPlatform.loadGraphic(Paths.image('dave/redPlatform'));
+				//redPlatform.setGraphicSize(Std.int(redPlatform.width * 0.85));
+				//redPlatform.updateHitbox();
+				//redPlatform.antialiasing = true;
+				//redPlatform.scrollFactor.set(1.0, 1.0);
+				//redPlatform.active = true;
+				//add(redPlatform);
+
+				blackBG.loadGraphic(Paths.image('dave/blackBG'));
+				blackBG.antialiasing = true;
+				blackBG.scrollFactor.set(0.6, 0.6);
+				blackBG.active = true;
+                blackBG.visible = false;
+				add(blackBG);
+
+				backyardnight.loadGraphic(Paths.image('dave/backyardnight'));
+				backyardnight.antialiasing = true;
+				backyardnight.scrollFactor.set(0.6, 0.6);
+				backyardnight.active = true;
+				backyardnight.visible = false;
+				add(backyardnight);
+
+				UsingNewCam = false;
+			}
+
+		case '3dPissed':
+			{
+				defaultCamZoom = 0.85;
+				curStage = '3dPissed';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bandu/disrupted'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}
+
+			case 'disruptor':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'disruptor';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bandu/disrupt'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}
+
+
+			case 'rippler':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'rippler';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('dave/rippler'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
 			case 'oldRed':
 			{
 				defaultCamZoom = 0.85;
@@ -642,6 +770,30 @@ class PlayState extends MusicBeatState
 
 				UsingNewCam = true;
 			}
+
+
+			case 'New Universe':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'New Universe';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('suffer/universitybg'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
 
 
 			case 'manbi_is_dead':
@@ -785,223 +937,7 @@ class PlayState extends MusicBeatState
 				#end
 
 				UsingNewCam = true;
-			}			
-
-
-			case 'bg1':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'bg1';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg1'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}	
-
-
-			case 'bg2':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'bg2';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg2'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}	
-
-
-			case 'bg3':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'bg3';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg3'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}							
-
-
-			case 'apple':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'apple';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bandu/apple'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
 			}
-
-
-			case 'disruptor':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'disruptor';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bandu/disrupt'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}			
-
-
-		case '3dRed':
-			{
-				defaultCamZoom = 0.85;
-				curStage = '3dRed';
-
-				redSky.loadGraphic(Paths.image('dave/redsky'));
-				redSky.antialiasing = true;
-				redSky.scrollFactor.set(0.6, 0.6);
-				redSky.active = true;
-
-				add(redSky);
-
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				redSky.shader = testshader.shader;
-				curbg = redSky;
-				#end
-
-				//redPlatform.loadGraphic(Paths.image('dave/redPlatform'));
-				//redPlatform.setGraphicSize(Std.int(redPlatform.width * 0.85));
-				//redPlatform.updateHitbox();
-				//redPlatform.antialiasing = true;
-				//redPlatform.scrollFactor.set(1.0, 1.0);
-				//redPlatform.active = true;
-				//add(redPlatform);
-
-				blackBG.loadGraphic(Paths.image('dave/blackBG'));
-				blackBG.antialiasing = true;
-				blackBG.scrollFactor.set(0.6, 0.6);
-				blackBG.active = true;
-                blackBG.visible = false;
-				add(blackBG);
-
-				backyardnight.loadGraphic(Paths.image('dave/backyardnight'));
-				backyardnight.antialiasing = true;
-				backyardnight.scrollFactor.set(0.6, 0.6);
-				backyardnight.active = true;
-				backyardnight.visible = false;
-				add(backyardnight);
-
-				UsingNewCam = false;
-			}
-
-		case '3dPissed':
-			{
-				defaultCamZoom = 0.85;
-				curStage = '3dPissed';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('dave/disrupted'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}
-
-
-		case 'tech':
-			{
-				defaultCamZoom = 0.85;
-				curStage = 'tech';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bombu/tech'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.6, 0.6);
-				bg.active = true;
-
-				add(bg);
-				#if windows
-				// below code assumes shaders are always enabled which is bad
-				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
-				testshader.waveAmplitude = 0.1;
-				testshader.waveFrequency = 5;
-				testshader.waveSpeed = 2;
-				bg.shader = testshader.shader;
-				curbg = bg;
-				#end
-
-				UsingNewCam = true;
-			}
-
 
 		case '3dGreen':
 			{
@@ -1064,6 +1000,9 @@ class PlayState extends MusicBeatState
 
 				var bg:BGSprite = new BGSprite('bambi/purgatory/graysky', -600, -200, 0.2, 0.2);
 				add(bg);
+
+				var grid:BGSprite = new BGSprite('bambi/purgatory/Grid_BG', -600, -200, 0.2, 0.2);
+				add(grid);
 	
 				var bgshit:BGSprite = new BGSprite('bambi/purgatory/3d_Objects', -600, -200, 0.7, 0.7);
 				bgshit.setGraphicSize(Std.int(bgshit.width * 1.25));
@@ -1105,6 +1044,123 @@ class PlayState extends MusicBeatState
 				testshader.waveSpeed = 2;
 				bg.shader = testshader.shader;
 				curbg = bg;
+				#end
+
+				//var scaryPlatform:FlxSprite = new FlxSprite(-275, 750).loadGraphic(Paths.image('dave/scaryPlatform'));
+				//scaryPlatform.setGraphicSize(Std.int(scaryPlatform.width * 0.85));
+				//scaryPlatform.updateHitbox();
+				//scaryPlatform.antialiasing = true;
+				//scaryPlatform.scrollFactor.set(1.0, 1.0);
+				//scaryPlatform.active = true;
+				//add(scaryPlatform);
+
+				UsingNewCam = true;
+			}
+		case '3dLaptop':
+		{
+			defaultCamZoom = 0.6;
+			curStage = '3dLaptop';
+			var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dave/3dLaptop'));
+			bg.setGraphicSize(Std.int(bg.width * 5));
+			bg.antialiasing = true;
+			bg.scrollFactor.set(0.6, 0.6);
+			bg.active = true;
+
+			add(bg);
+			#if windows
+			// below code assumes shaders are always enabled which is bad
+			var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+			testshader.waveAmplitude = 0.1;
+			testshader.waveFrequency = 5;
+			testshader.waveSpeed = 2;
+			bg.shader = testshader.shader;
+			curbg = bg;
+			#end
+
+			//var scaryPlatform:FlxSprite = new FlxSprite(-275, 750).loadGraphic(Paths.image('dave/scaryPlatform'));
+			//scaryPlatform.setGraphicSize(Std.int(scaryPlatform.width * 0.85));
+			//scaryPlatform.updateHitbox();
+			//scaryPlatform.antialiasing = true;
+			//scaryPlatform.scrollFactor.set(1.0, 1.0);
+			//scaryPlatform.active = true;
+			//add(scaryPlatform);
+
+			UsingNewCam = true;
+		}
+		case '3dBurger':
+		{
+			defaultCamZoom = 0.6;
+			curStage = '3dBurger';
+			var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dave/3dBurger'));
+			bg.setGraphicSize(Std.int(bg.width * 5));
+			bg.antialiasing = true;
+			bg.scrollFactor.set(0.6, 0.6);
+			bg.active = true;
+
+			add(bg);
+			#if windows
+			// below code assumes shaders are always enabled which is bad
+			var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+			testshader.waveAmplitude = 0.1;
+			testshader.waveFrequency = 5;
+			testshader.waveSpeed = 2;
+			bg.shader = testshader.shader;
+			curbg = bg;
+			#end
+
+			//var scaryPlatform:FlxSprite = new FlxSprite(-275, 750).loadGraphic(Paths.image('dave/scaryPlatform'));
+			//scaryPlatform.setGraphicSize(Std.int(scaryPlatform.width * 0.85));
+			//scaryPlatform.updateHitbox();
+			//scaryPlatform.antialiasing = true;
+			//scaryPlatform.scrollFactor.set(1.0, 1.0);
+			//scaryPlatform.active = true;
+			//add(scaryPlatform);
+
+			UsingNewCam = true;
+		}
+		case '3dDevastation':
+			{
+				defaultCamZoom = 0.6;
+				curStage = '3dDevastation';
+				devaBurger = new FlxSprite(0,0).loadGraphic(Paths.image('dave/3dBurger'));
+				devaBurger.setGraphicSize(Std.int(devaBurger.width * 5));
+				devaBurger.antialiasing = true;
+				devaBurger.scrollFactor.set(0.6, 0.6);
+				devaBurger.active = true;
+				
+				devaLaptop = new FlxSprite(0,0).loadGraphic(Paths.image('dave/3dLaptop'));
+				devaLaptop.setGraphicSize(Std.int(devaLaptop.width * 5));
+				devaLaptop.antialiasing = true;
+				devaLaptop.scrollFactor.set(0.6, 0.6);
+				devaLaptop.active = false;
+
+				devaExpunged = new FlxSprite(-600, -200).loadGraphic(Paths.image('dave/3dFucked'));
+				devaExpunged.setGraphicSize(Std.int(devaExpunged.width * 1.8));
+				devaExpunged.antialiasing = true;
+				devaExpunged.scrollFactor.set(0.6, 0.6);
+				devaExpunged.active = false;
+
+				add(devaExpunged);
+				add(devaLaptop);
+				add(devaBurger);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				var testshader2:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader2.waveAmplitude = 0.1;
+				testshader2.waveFrequency = 5;
+				testshader2.waveSpeed = 2;
+				var testshader3:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader3.waveAmplitude = 0.1;
+				testshader3.waveFrequency = 5;
+				testshader3.waveSpeed = 2;
+				devaBurger.shader = testshader.shader;
+				devaLaptop.shader = testshader2.shader;
+				devaExpunged.shader = testshader3.shader;
+				curbg = devaBurger;
 				#end
 
 				//var scaryPlatform:FlxSprite = new FlxSprite(-275, 750).loadGraphic(Paths.image('dave/scaryPlatform'));
@@ -1196,7 +1252,6 @@ class PlayState extends MusicBeatState
 				UsingNewCam = true;
 			}
 
-
 		case 'death':
 			{
 				defaultCamZoom = 0.85;
@@ -1252,9 +1307,127 @@ class PlayState extends MusicBeatState
 				add(sign);				
 
 				UsingNewCam = true;
-			}					
+			}
 
-			
+			case 'bamberHell':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'bamberHell';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('3dsheesh/mediocre_bg'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
+			case 'bg1':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'bg1';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg1'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}			
+
+
+			case 'bg2':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'bg2';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg2'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}	
+
+
+			case 'bg3':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'bg3';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('the-trio/bg3'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}							
+
+
+			case 'apple':
+			{
+				defaultCamZoom = 0.85;
+				curStage = 'apple';
+				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bandu/apple'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.6, 0.6);
+				bg.active = true;
+
+				add(bg);
+				#if windows
+				// below code assumes shaders are always enabled which is bad
+				var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect();
+				testshader.waveAmplitude = 0.1;
+				testshader.waveFrequency = 5;
+				testshader.waveSpeed = 2;
+				bg.shader = testshader.shader;
+				curbg = bg;
+				#end
+
+				UsingNewCam = true;
+			}						
+
 		case 'farmSunset':
 			{
 				defaultCamZoom = 0.85;
@@ -2015,59 +2188,67 @@ class PlayState extends MusicBeatState
 		{
 			case 'supernovae':
 				credits = 'Original Song made by ArchWk!';
-			case 'technology':
-				credits = 'Note: New version';
 			case 'glitch':
 				credits = 'Original Song made by DeadShadow and PixelGH!';
 			case 'mealie':
-				credits = 'Original Song made by Alexander';
+				credits = 'Original Song made by Alexander Cooper 19!';
 			case '8-28-63':
 				credits = 'Original Song made by Tsuraran + Cover by !Periodsnot!';
 			case 'unfairness':
 				credits = "Ghost tapping is forced off! Screw you!";
 			case 'opposition':
 				credits = "Fuck you. You're done.";
+			case 'disruption':
+				credits = "Screw you! - (Original song made by Grantare! - VDAB Golden Apple Edition)";
 			case 'sucked':
 				credits = 'Original Song made by ZackGM/SomeThing111 - Vs Umball';
 			case 'cheating':
 				credits = 'Screw you!';
-			case 'cheating-2':
-				credits = 'Screw you!';
-			case 'taimuresu':
-				credits = 'SCREW YOU!!! chart made by Archasia! Original song made by Maevings!';								
 			case 'vs-dave-thanksgiving' | 'vs-dave-christmas':
 				credits = 'What the fuck.';
-			case 'outrage' | 'enshrouded':
-				credits = 'HOW AM I F*** YOU!?!?!?!?!?!?';
-			case 'golden':
-				credits = 'OC Made By joolian And Austin!';	
-			case 'corn-theft':
-				credits = 'Remix Made By JamixerDev!';
-			case 'phonophobia':
-				credits = 'TURN OFF MIDDLESCROLL IMMEDIATELY!	';				
-			case 'corn-theft-but-awesome':
-				credits = 'Remix Made By JamixerDev!';									
-			case 'rano' | 'shredder':
-				credits = 'Chart Made By RythmShadow!';
-			case 'splitathon-2':
-				credits = 'Chart Made By TheMobile!';													
-			case 'test-song':
-				credits = 'Chart By QonDonion(), Song Made By Grantare!';
-			case 'devastation':
-				credits = 'Song Made By hortas! Chart By epic!';
-			case 'tsukareta' | 'disruption':
-				credits = 'Importantly Turn On DownScroll and turn off middlescroll immediately!';					
-			case 'outerspace':
-				credits = 'song made by hortas!';
-			case 'delirium' | 'thearchy' | 'disposition' | 'tsukareta' | 'piirangud':
-				credits = 'seeing you suffer is so good';																
 			case 'secret':
-				credits = 'ATTENTION: WE HAVE DISCOVERED YOU HAVE MORE THAN ONE CHILD! THE BALDI BASICS VIRUS HAS INFECTED YOUR CHINESE GOVERNMENT ISSUED COMPUTER! SEND US FIVE BILLION ¥ OR WE WILL ASSASSINATE YOUR FAMILY!';
+				credits = 'you are shit';
+			case 'devastation':
+				credits = 'Song made by Hortas, Pyramix and ShredBoi. Chart By TerribleAtCreating!';
+			case 'antagonism':
+				credits = 'Chart Made By TerribleAtCreating!';
+			case 'outerspace':
+				credits = 'Song made by Hortas!';
+			case 'delirium':
+				credits = 'Song made by Hortas!';
+			case 'septuagint':
+				credits = 'Song made by Hortas!';											
+			case 'acquaintance':
+				credits = 'Chart Made By TerribleAtCreating!';
+			case 'ithrekhi-yogaxelike':
+				credits = 'ur done. F_you';				
 			case 'DATA_EXPUNGED_(HAXELIB_ERROR)':
 				credits = "????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????"; 
 			default:
 				credits = '';
 		}
+		var randomThingy:Int = FlxG.random.int(0, 2);
+		var engineName:String = 'stupid';
+		switch(randomThingy)
+	    {
+			case 0:
+				engineName = 'Dave ';
+			case 1:
+				engineName = 'Bambi ';
+			case 2:
+				engineName = 'Tristan ';
+		}		
+		var randomThingy:Int = FlxG.random.int(0, 2);
+		var engineName:String = 'stupid';
+		switch(randomThingy)
+	    {
+			case 0:
+				engineName = 'ps5 ';
+			case 1:
+				engineName = 'ekkesbokkesserresekkes ';
+			case 2:
+				engineName = 'Random ';
+		}		
 		var creditsText:Bool = credits != '';
 		var textYPos:Float = healthBarBG.y + 50;
 		if (creditsText)
@@ -2078,8 +2259,8 @@ class PlayState extends MusicBeatState
 		var songWatermark = new FlxText(4, textYPos, 0,
 		SONG.song
 		+ " "
-		+ (curSong.toLowerCase() != 'splitathon' ? (storyDifficulty == 3 ? "- FINALE" : storyDifficulty == 2 ? "- HARD" : storyDifficulty == 1 ? "- NORMAL" : "- EASY") : "- FINALE")
-		+ " - V3.0", 16);
+		+ (curSong.toLowerCase() != 'splitathon' ? (storyDifficulty == 3 ? "Finale" : storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") : "Finale")
+		+ " | M4rshL0V Engine.", 16);
 		//+ " ", 16);
 		songWatermark.setFormat(Paths.font("comic-sans.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songWatermark.scrollFactor.set();
@@ -2095,7 +2276,7 @@ class PlayState extends MusicBeatState
 
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "CHEATPLAY", 32);
 		botplayTxt.setFormat(Paths.font("comic-sans.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -2198,7 +2379,7 @@ class PlayState extends MusicBeatState
 					{
 						camHUD.visible = true;
 						remove(blackScreen);
-						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 3.0, {
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
 							ease: FlxEase.quadInOut,
 							onComplete: function(twn:FlxTween)
 							{
@@ -2206,7 +2387,7 @@ class PlayState extends MusicBeatState
 							}
 						});
 					});
-				case 'senpai' | 'roses' | 'thorns' | 'polygonized' | 'furiosity':
+				case 'senpai' | 'roses' | 'thorns' | 'polygonized' | 'furiosity' | 'old-furiosity':
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 
@@ -2216,6 +2397,9 @@ class PlayState extends MusicBeatState
 		 
 						 case 'insanity':
 							startDialogue(dialogueJson);
+
+						 case 'beta-insanity':
+							startDialogue(dialogueJson);							
 		 
 						 // Bambi shit 
 						 case 'blocked':
@@ -2514,7 +2698,7 @@ class PlayState extends MusicBeatState
 			}
 			for (i in 0...opponentStrums.length) {
 				setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
-				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);	
+				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
 				if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
@@ -2545,6 +2729,13 @@ class PlayState extends MusicBeatState
 					if (dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 					{
 						dad.dance();
+					}
+					if (dad2 != null)
+					{
+						if (dad2.animation.curAnim != null && !dad2.animation.curAnim.name.startsWith("sing") && !dad2.stunned)
+						{
+							dad2.dance();
+						}
 					}
 				}
 				else if(dad.danceIdle && dad.animation.curAnim != null && !dad.stunned && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing"))
@@ -3104,6 +3295,13 @@ class PlayState extends MusicBeatState
 	override public function update(elapsed:Float)
 	{
 	elapsedtime += elapsed;
+	if(redTunnel != null)
+	{
+		redTunnel.angle += elapsed * 3.5;
+		var theScale = 0.01 * (1 - redTunnel.scale.x) + redTunnel.scale.x; //the += thing not work
+		redTunnel.scale.set(theScale, theScale);
+		redTunnel.updateHitbox();
+	}
 	#if windows
 	if (curbg != null)
 	{
@@ -3204,6 +3402,43 @@ class PlayState extends MusicBeatState
 					spr.y -= Math.sin(elapsedtime) * 1.3;
 				});
 			}
+	if (SONG.song.toLowerCase() == 'devastation') // oh shit
+		{
+			if (curStep > 1280 && curStep < 3232)
+			{
+				playerStrums.forEach(function(spr:FlxSprite)
+					{
+						spr.y += Math.sin(elapsedtime) * ((spr.ID % 0.2) == 0 ? 0.005 : -0.005);
+						spr.y -= Math.sin(elapsedtime) * 0.05;
+						spr.x -= Math.sin(elapsedtime) * ((spr.ID % 0.1) == 0 ? 0 : -0);
+						spr.x += Math.sin(elapsedtime) * 0.1;
+					});
+				opponentStrums.forEach(function(spr:FlxSprite)
+				{
+					spr.y -= Math.sin(elapsedtime) * ((spr.ID % 0.2) == 0 ? 0.005 : -0.005);
+					spr.y += Math.sin(elapsedtime) * 0.05;
+					spr.x -= Math.sin(elapsedtime) * ((spr.ID % 0.1) == 0 ? 0 : -0);
+					spr.x += Math.sin(elapsedtime) * 0.1;
+				});
+			}
+			if (curStep > 3232)
+			{
+			playerStrums.forEach(function(spr:FlxSprite)
+				{
+					spr.x = ((FlxG.width / 12) - (spr.width / 7)) + (Math.sin(elapsedtime + (spr.ID)) * 500);
+					spr.x += 500; 
+					spr.y += Math.sin(elapsedtime) * Math.random();
+					spr.y -= Math.sin(elapsedtime) * 1.3;
+				});
+				opponentStrums.forEach(function(spr:FlxSprite)
+				{
+					spr.x = ((FlxG.width / 12) - (spr.width / 7)) + (Math.sin((elapsedtime + (spr.ID )) * 2) * 500);
+					spr.x += 500; 
+					spr.y += Math.sin(elapsedtime) * Math.random();
+					spr.y -= Math.sin(elapsedtime) * 1.3;
+				});
+			}
+		}
 	if (SONG.song.toLowerCase() == 'furiosity') // is cool, ratio
 			{
 				playerStrums.forEach(function(spr:FlxSprite)
@@ -3217,11 +3452,24 @@ class PlayState extends MusicBeatState
 					spr.y += Math.sin(elapsedtime) * 0.3;
 				});
 			}
+	if (SONG.song.toLowerCase() == 'old-furiosity') // is cool, ratio
+			{
+				playerStrums.forEach(function(spr:FlxSprite)
+				{
+					spr.y += Math.sin(elapsedtime) * Math.random();
+					spr.y -= Math.sin(elapsedtime) * 0.3;
+				});
+				opponentStrums.forEach(function(spr:FlxSprite)
+				{
+					spr.y -= Math.sin(elapsedtime) * Math.random();
+					spr.y += Math.sin(elapsedtime) * 0.3;
+				});
+			}			
 	    	if (SONG.song.toLowerCase() == 'disruption') // deez all day
 				{
 				var krunkThing = 60;
 	
-				poop.alpha = Math.sin(elapsedtime) / 3.0 + 0.4;
+				poop.alpha = Math.sin(elapsedtime) / 2.5 + 0.4;
 	
 				playerStrums.forEach(function(spr:FlxSprite)
 				{
@@ -3237,7 +3485,7 @@ class PlayState extends MusicBeatState
 
 					spr.scale.x *= 1.5;
 					spr.scale.y *= 1.5;
-				});
+				});			
 				opponentStrums.forEach(function(spr:FlxSprite)
 				{
 					spr.x = arrowJunks[spr.ID][0] + (Math.sin(elapsedtime) * ((spr.ID % 2) == 0 ? 1 : -1)) * krunkThing;
@@ -3373,6 +3621,20 @@ class PlayState extends MusicBeatState
 				case 1180:
 					dad.animation.play('scared', true);
 			}
+		case 'beta-insanity':
+			switch (curStep)
+			{
+				case 660 | 680:
+					FlxG.sound.play(Paths.sound('static'), 0.1);
+                    insanityRed.visible = true;
+				case 664 | 684:
+					insanityRed.visible = false;
+				case 1176:
+					FlxG.sound.play(Paths.sound('static'), 0.1);
+					insanityRed.visible = true;
+				case 1180:
+					dad.animation.play('scared', true);
+			}			
 		case 'furiosity':
 			switch (curStep)
 			{
@@ -3382,6 +3644,15 @@ class PlayState extends MusicBeatState
 					//redPlatform.visible = false;
 					backyardnight.visible = true;
 			}
+		case 'old-furiosity':
+			switch (curStep)
+			{
+				case 1305:
+					FlxG.camera.flash(FlxColor.WHITE, 1);
+					redSky.visible = false;
+					//redPlatform.visible = false;
+					backyardnight.visible = true;
+			}			
 		case 'polygonized':
 			switch (curStep)
 			{
@@ -3460,9 +3731,7 @@ class PlayState extends MusicBeatState
 				case 128:
 					if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 					redGlow.visible = true;
-				case 1344:
-					if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
-				case 1472:
+				case 2928:
 					if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 					camHUD.visible = false;
 					redGlow.visible = false;
@@ -3499,7 +3768,7 @@ class PlayState extends MusicBeatState
 		case 'technology':
 			switch (curStep)
 			{
-				case 794:
+				case 1024:
 				if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 				//purpleGlow,visible = true;
 			}
@@ -3680,15 +3949,12 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: 0% | O/S';
+			scoreTxt.text = 'NPS: ' + nps + ' | Score: ' + songScore + ' | RAGES: ' + songMisses + ' | Accuracy: 0% | N/A';
 		} else {
-			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Math.floor(ratingPercent * 100) + '% | ' + ratingFC;
-		}
-		if(cpuControlled) {
-			scoreTxt.text = 'I am Gonna Disable ur mom | BotPlay ';
+			scoreTxt.text = 'NPS: ' + nps + ' | Score: ' + songScore + ' | RAGES: ' + songMisses + ' | Accuracy: ' + Math.floor(ratingPercent * 100) + '% | ' + ratingFC;
 		}
 		if(practiceMode) {
-			scoreTxt.text = 'NPS/SPN: ' + nps + ' | Combo Breaks: ' + songMisses + ' | Practica Mod ';
+			scoreTxt.text = 'NPS: ' + nps + ' | RAGES: ' + songMisses + ' | Practice Mode ';
 		}
 
 		if(cpuControlled) {
@@ -3758,13 +4024,28 @@ class PlayState extends MusicBeatState
 						FlxG.switchState(new PlayState());
 						return;
 					case 'opposition':
+						#if debug
+						MusicBeatState.switchState(new ChartingState());
+						#end
+						PlayState.SONG = Song.loadFromJson("antagonism-hard", "old-antagonism"); // YOOOOOOO still here.
 						shakeCam = false;
 						#if windows
 						screenshader.Enabled = false;
 						#end
-						FlxG.switchState(new SusState());
+						FlxG.switchState(new PlayState());
 						return;
 					case 'unfairness':
+						#if debug
+						MusicBeatState.switchState(new ChartingState());
+						#end
+						PlayState.SONG = Song.loadFromJson("ripple-fanmade-hard", "ripple-fanmade"); // YOOOOOOO still here.
+						shakeCam = false;
+						#if windows
+						screenshader.Enabled = false;
+						#end
+						FlxG.switchState(new PlayState());
+						return;
+					case 'ripple-fanmade':
 						shakeCam = false;
 						#if windows
 						screenshader.Enabled = false;
@@ -3773,7 +4054,7 @@ class PlayState extends MusicBeatState
 						return;
 						#if debug
 						MusicBeatState.switchState(new ChartingState());
-						#end
+						#end						
 					default:
 						persistentUpdate = false;
 						paused = true;
@@ -3922,6 +4203,14 @@ class PlayState extends MusicBeatState
 				case 287:
 					camZooming = false;
 			}
+			case 'old-furiosity':
+			switch (curBeat)
+			{
+				case 64:
+					camZooming = true;
+				case 287:
+					camZooming = false;
+			}			
 			case 'disposition':
 				for (i in 0...opponentStrums.length) {
 				setOnLuas('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
@@ -4185,7 +4474,16 @@ class PlayState extends MusicBeatState
 						if(daNote.noteType == 'GF Sing') {
 							gf.playAnim(animToPlay + altAnim, true);
 							gf.holdTimer = 0;
-						} else {
+						}
+						if(daNote.noteType == 'Dad2' && dad2 != null) {
+							dad2.playAnim(animToPlay + altAnim, true);
+							dad2.holdTimer = 0;
+						}
+						if(daNote.noteType == 'Dad3' && dad3 != null) {
+							dad2.playAnim(animToPlay + altAnim, true);
+							dad2.holdTimer = 0;
+						} 
+						if(daNote.noteType == '') {
 							dad.playAnim(animToPlay + altAnim, true);
 							dad.holdTimer = 0;
 						}
@@ -4202,6 +4500,9 @@ class PlayState extends MusicBeatState
 							if(gf.animOffsets.exists('scared')) {
 								gf.playAnim('scared', true);
 							}
+						case 'devastation':
+							if(health > 0.1 && curStep > 1280) health -= 0.01;
+							if(curStep > 3232) camHUD.shake(0.0065, 0.1);
 					   	}
 
 					    switch (SONG.song.toLowerCase())
@@ -4214,7 +4515,7 @@ class PlayState extends MusicBeatState
 								camHUD.shake(0.0045, 0.1);
 							case 'disruption':
 								health -= healthtolower / 2.65;
-								camHUD.shake(0.0045, 0.1);
+								camHUD.shake(0.0045, 0.1);							
 						}
 
 						   
@@ -4594,7 +4895,28 @@ class PlayState extends MusicBeatState
 
 			case 'Kill Henchmen':
 				killHenchmen();
-
+			case 'Spawn RedTunnel':
+				spawnRedTunnel();
+			case 'Spawn Alt Character':
+				switch(value1)
+				{
+					case 'Dad2':
+						dad2 = new Character(-250, 0, value2);
+						startCharacterPos(dad2, true);
+						add(dad2);
+					case 'Dad3':
+						dad3 = new Character(-250, -100, value2);
+						startCharacterPos(dad3, true);
+						add(dad3);
+				}
+			case 'Remove Alt Character':
+				switch(value1)
+				{
+					case 'Dad2':
+						remove(dad2);
+					case 'Dad3':
+						remove(dad3);
+				}
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
 					var camZoom:Float = Std.parseFloat(value1);
@@ -5607,12 +5929,12 @@ class PlayState extends MusicBeatState
 
 			if (!note.isSustainNote)
 				{
+					combo += 1;
 					popUpScore(note);
 					if(ClientPrefs.hitsounds)
 					{
 						FlxG.sound.play(Paths.sound('note_click', 'shared'));
 					}
-					combo += 1;
 					if(combo > 9999) combo = 9999;
 				}
 			health += note.hitHealth;
@@ -5918,6 +6240,23 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function spawnRedTunnel()
+	{
+		var position:Int = members.indexOf(gfGroup);
+		if(members.indexOf(boyfriendGroup) < position) {
+			position = members.indexOf(boyfriendGroup);
+		} else if(members.indexOf(dadGroup) < position) {
+			position = members.indexOf(dadGroup);
+		}
+		redTunnel = new FlxSprite(-256, -256).loadGraphic(Paths.image('dave/redTunnel'));
+		redTunnel.antialiasing = true;
+		redTunnel.scrollFactor.set(0.6, 0.6);
+		redTunnel.active = true;
+		redTunnel.scale.set(0.01, 0.01);
+		redTunnel.updateHitbox();
+		insert(position, redTunnel);
+	}
+
 	function resetLimoKill():Void
 	{
 		if(curStage == 'limo') {
@@ -6010,6 +6349,34 @@ class PlayState extends MusicBeatState
 						shakeCam = false;
 						camZooming = false;
 				}
+			case 'devastation':
+				switch (curStep)
+				{
+					case 32:
+						dad2 = new Character(-300, 0, 'bandu');
+						startCharacterPos(dad2, true);
+						add(dad2);
+					case 1280: //note to self: 1280
+						if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.WHITE, 0.5);
+						remove(dad2);
+						devaBurger.visible = false;
+						devaLaptop.active = true;
+						curbg = devaLaptop;
+					case 3232: //note to self: 3232
+						health = 2;
+						devaBurger.visible = false;
+						devaLaptop.visible = false;
+						devaExpunged.active = true;
+						curbg = devaExpunged;
+						if(ClientPrefs.flashing) FlxG.camera.flash(FlxColor.BLACK, 3);
+						spawnRedTunnel();
+				}
+			case 'old-antagonism':
+				switch(curStep)
+				{
+					case 256:
+						FlxG.camera.flash(FlxColor.WHITE, 60/250*2);
+				}
 		}
 
 		if(curStep == lastStepHit) {
@@ -6089,46 +6456,46 @@ class PlayState extends MusicBeatState
 
 		var funny:Float = (healthBar.percent * 0.01) + 0.01;
 
-		//health icon bounce lol no lag real
-		if (curBeat % gfSpeed == 0) {
-			curBeat % (gfSpeed * 2) == 0 ? {
-				iconP1.scale.set(1.1, 0.8);
-				iconP2.scale.set(1.1, 1.3);
+		//health icon bounce but epic
+        if (curBeat % gfSpeed == 0) {
+            curBeat % (gfSpeed * 2) == 0 ? {
+                iconP1.scale.set(1.1, 0.8);
+                iconP2.scale.set(1.1, 1.3);
 
-				FlxTween.angle(iconP1, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
-				FlxTween.angle(iconP2, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
-			} : {
-				iconP1.scale.set(1.1, 1.3);
-				iconP2.scale.set(1.1, 0.8);
+                FlxTween.angle(iconP1, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+                FlxTween.angle(iconP2, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+            } : {
+                iconP1.scale.set(1.1, 1.3);
+                iconP2.scale.set(1.1, 0.8);
 
-				FlxTween.angle(iconP2, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
-				FlxTween.angle(iconP1, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
-			}
+                FlxTween.angle(iconP2, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+                FlxTween.angle(iconP1, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+            }
 
-			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
-			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+            FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+            FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
 
-			iconP1.updateHitbox();
-			iconP2.updateHitbox();
-		}
+            iconP1.updateHitbox();
+            iconP2.updateHitbox();
+        }
 
-		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
-		{
-			gf.dance();
-		}
+        if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
+        {
+            gf.dance();
+        }
 
-		if(curBeat % 2 == 0) {
-			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
-			{
-				boyfriend.dance();
-			}
-			if (dad.animation.curAnim.name != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
-			{
-				dad.dance();
-			}
-		} else if(dad.danceIdle && dad.animation.curAnim.name != null && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) {
-			dad.dance();
-		}
+        if(curBeat % 2 == 0) {
+            if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
+            {
+                boyfriend.dance();
+            }
+            if (dad.animation.curAnim.name != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
+            {
+                dad.dance();
+            }
+        } else if(dad.danceIdle && dad.animation.curAnim.name != null && !dad.curCharacter.startsWith('gf') && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) {
+            dad.dance();
+        } 
 
 		switch (curStage)
 		{
@@ -6264,15 +6631,15 @@ class PlayState extends MusicBeatState
 
 			// Rating FC
 			ratingFC = "";
-			if (sicks > 0) ratingFC = "(SFC) Sick!";
-			if (goods > 0) ratingFC = "(GFC) Good!";
-			if (bads > 0 || shits > 0) ratingFC = "(FC) Good";
+			if (sicks > 0) ratingFC = "(SFC) Perfect!";
+			if (goods > 0) ratingFC = "(GFC) Awesome!";
+			if (bads > 0 || shits > 0) ratingFC = "(FC) Great!";
 			if (songMisses > 0 && songMisses < 10) ratingFC = "(SDCB) Good";
-			if (songMisses >= 10) ratingFC = "(Clear) Ok";
-			if (songMisses >= 30) ratingFC = "(Clear) Meh";
-			if (songMisses >= 65) ratingFC = "(Clear - Skill Issue) Skill Issue";
-			if (songMisses >= 500) ratingFC = "(what the fuck) wtf";
-			else if (songMisses >= 1000) ratingFC = "poop";
+			if (songMisses >= 10) ratingFC = "(Clear) Not Bad";
+			if (songMisses >= 30) ratingFC = "(Clear) Not Good";
+			if (songMisses >= 65) ratingFC = "(Clear - Skill Issue) Bruh";
+			if (songMisses >= 500) ratingFC = "(what the fuck) Real Bad";
+			else if (songMisses >= 1000) ratingFC = "Bro u cant play a game right :hehehehehahahahahaw:";
 		}
 		setOnLuas('rating', ratingPercent);
 		setOnLuas('ratingName', ratingName);
@@ -6382,7 +6749,7 @@ class PlayState extends MusicBeatState
 				switch(achievementName)
 				{
 					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss':
-						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && CoolUtil.difficultyString() == 'FINALE' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'Hard' && CoolUtil.difficultyString() == 'Finale' && CoolUtil.difficultyString() == 'Legacy' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
@@ -6400,7 +6767,7 @@ class PlayState extends MusicBeatState
 							}
 						}
 					case 'week6_complete':
-						if(isStoryMode && CoolUtil.difficultyString() == 'HARD' && CoolUtil.difficultyString() == 'FINALE' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						if(isStoryMode && CoolUtil.difficultyString() == 'Hard' && CoolUtil.difficultyString() == 'Finale' && CoolUtil.difficultyString() == 'Legacy' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) // huh

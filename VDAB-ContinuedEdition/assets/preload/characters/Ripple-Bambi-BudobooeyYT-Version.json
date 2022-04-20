@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				270,
+				115
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Ripple Bambi BudobooeyYT Version Sing Down"
+		},
+		{
+			"offsets": [
+				250,
+				250
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "Ripple Bambi BudobooeyYT Version Idle"
+		},
+		{
+			"offsets": [
+				264,
+				405
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Ripple Bambi BudobooeyYT Version Sing Up"
+		},
+		{
+			"offsets": [
+				280,
+				286
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Ripple Bambi BudobooeyYT Version Sing Left"
+		},
+		{
+			"offsets": [
+				130,
+				285
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Ripple Bambi BudobooeyYT Version Sing Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Ripple Bambi BudobooeyYT Version",
+	"position": [
+		-340,
+		-390
+	],
+	"healthicon": "icon-ripple-bambi-budobooeyYT-version",
+	"flip_x": false,
+	"healthbar_colors": [
+		200,
+		0,
+		0
+	],
+	"camera_position": [
+		-390,
+		50
+	],
+	"sing_duration": 3,
+	"scale": 0.7
+}

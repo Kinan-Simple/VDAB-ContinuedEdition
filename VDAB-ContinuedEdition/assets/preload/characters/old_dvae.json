@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-10,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Dave Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Dave idle dance"
+		},
+		{
+			"offsets": [
+				5,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Dave Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				-29,
+				12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Dave Sing Note UP"
+		},
+		{
+			"offsets": [
+				-29,
+				44
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Dave Sing Note RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/old_dvae",
+	"position": [
+		0,
+		-100
+	],
+	"healthicon": "dave_old",
+	"flip_x": false,
+	"healthbar_colors": [
+		200,
+		0,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

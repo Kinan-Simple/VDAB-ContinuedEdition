@@ -12607,14 +12607,54 @@
 				"bpm": 160
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 160,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 160,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 160,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 160
 			},
 			{
 				"gfSection": false,
@@ -12641,7 +12681,7 @@
 		"player3": "gf",
 		"event7Value": null,
 		"song": "Nomophobia",
-		"arrowSkin": "",
+		"arrowSkin": "2dgodnote",
 		"validScore": true,
 		"speed": 3.7,
 		"sectionLengths": [],
@@ -12649,9 +12689,9 @@
 		"gfVersion": "gf",
 		"credit": "ThatPizzaTowerFan",
 		"screwYou": null,
-		"needsVoices": true,
-		"stage": "farmNight",
+		"stage": "death",
 		"sections": 1,
+		"needsVoices": true,
 		"bpm": 160
 	}
 }

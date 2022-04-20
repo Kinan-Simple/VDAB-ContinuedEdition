@@ -25,15 +25,15 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = 'No dad? Engine'; //This is also used for Discord RPC
-	public static var curModVer:String = 'V3.0'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = 'Random Engine'; //This is also used for Discord RPC
+	public static var curModVer:String = 'PE CUSTOM BUILD'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['story_mode', 'freeplay', 'extras', 'options'];
+	var optionShit:Array<String> = ['freeplay', 'extras', 'options'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -43,9 +43,9 @@ class MainMenuState extends MusicBeatState
 
 	public static var finishedFunnyMove:Bool = false;
 	
-	public static var daRealEngineVer:String = 'Grass';
+	public static var daRealEngineVer:String = 'momongus';
 
-	public static var engineVers:Array<String> = ['Mrbest'];
+	public static var engineVers:Array<String> = ['MOM IM FAMOUS!!'];
 
 	public static var bgPaths:Array<String> = 
 	[
@@ -59,7 +59,13 @@ class MainMenuState extends MusicBeatState
 		'backgrounds/gmaing',
 		'backgrounds/m',
 		'backgrounds/aadyian when white',
-		'backgrounds/whenthe engine be like'				
+		'backgrounds/whenthe engine be like',
+		'backgrounds/darlyboxman',
+		'backgrounds/isaaclul',
+		'backgrounds/osp',
+		'backgrounds/slushX',
+		'backgrounds/voidsslime',
+		'backgrounds/voltrex'																
 	];
 
 	override function create()
@@ -124,7 +130,7 @@ class MainMenuState extends MusicBeatState
 				menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 				menuItem.animation.play('idle');
 				menuItem.ID = i;
-				menuItem.x = -200;
+				menuItem.x = 100;
 				menuItems.add(menuItem);
 				menuItem.scrollFactor.set();
 				menuItem.antialiasing = ClientPrefs.globalAntialiasing;
@@ -140,13 +146,13 @@ class MainMenuState extends MusicBeatState
 
 		firstStart = false;
 
-		FlxG.camera.follow(camFollowPos, null, 1);
+		//FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Psych Engine v" + psychEngineVersion, 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Psych v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("Comic Sans MS Bold", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Funkin' v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("Comic Sans MS Bold", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -254,7 +260,7 @@ class MainMenuState extends MusicBeatState
 	
 			menuItems.forEach(function(spr:FlxSprite)
 			{
-				spr.screenCenter(X);
+			
 			});
 		}
 	function goToState()

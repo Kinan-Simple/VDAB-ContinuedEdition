@@ -1,141 +1,66 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-9,
-				30
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"indices": [
-				12,
-				13,
-				14,
-				15
-			],
-			"name": "Dad Sing Note LEFT"
-		},
-		{
-			"offsets": [
-				0,
-				47
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"indices": [
-				15,
-				16,
-				17,
-				18
-			],
-			"name": "Dad Sing Note RIGHT"
-		},
-		{
-			"offsets": [
-				-6,
-				70
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [
-				56,
-				57,
-				58,
-				59
-			],
-			"name": "Dad Sing Note UP"
-		},
-		{
 			"loop": false,
 			"offsets": [
-				140,
-				-80
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "WhatYouKnowAboutRollingDownInTheDeep",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				0,
-				20
-			],
-			"anim": "idle-loop",
-			"fps": 12,
-			"name": "Dave Idle",
-			"indices": [
-				10,
-				11,
-				12,
-				12
-			]
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-300,
-				20
+				855,
+				280
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "bamburg idle",
+			"name": "Idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-190,
-				85
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "bamburg up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				50,
-				20
+				575,
+				234
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "bamburg left",
+			"name": "Left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-350,
-				20
+				280,
+				210
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				191,
+				687
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				901,
+				737
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "bamburg right",
+			"name": "Right",
 			"indices": []
-		},
-		{
-			"offsets": [
-				-190,
-				85
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "bamburg up"
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/bamburg",
 	"position": [
-		-540,
-		-240
+		-380,
+		-60
 	],
 	"healthicon": "bamburg",
 	"flip_x": false,
@@ -145,9 +70,9 @@
 		0
 	],
 	"camera_position": [
-		250,
-		115
+		160,
+		-360
 	],
-	"sing_duration": 6.1,
-	"scale": 1
+	"sing_duration": 4,
+	"scale": 0.7
 }

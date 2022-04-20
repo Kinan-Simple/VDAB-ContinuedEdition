@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Poip.png"><SubTexture name="Poip idle0000" x="1402" y="0" width="298" height="467" frameX="-43" frameY="-20" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0001" x="763" y="570" width="278" height="472" frameX="-56" frameY="-13" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0002" x="1141" y="0" width="261" height="471" frameX="-60" frameY="-8" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0003" x="506" y="570" width="257" height="473" frameX="-42" frameY="-10" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0004" x="254" y="570" width="252" height="478" frameX="-21" frameY="-14" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0005" x="0" y="570" width="254" height="479" frameX="-4" frameY="-18" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0006" x="254" y="570" width="252" height="478" frameX="-21" frameY="-14" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0007" x="506" y="570" width="257" height="473" frameX="-42" frameY="-10" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0008" x="1141" y="0" width="261" height="471" frameX="-60" frameY="-8" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0009" x="763" y="570" width="278" height="472" frameX="-56" frameY="-13" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0010" x="1402" y="0" width="298" height="467" frameX="-43" frameY="-20" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip idle0011" x="0" y="1049" width="320" height="459" frameX="-25" frameY="-28" frameWidth="349" frameHeight="500" />
+<SubTexture name="Poip up0000" x="0" y="0" width="288" height="570" frameX="-149" frameY="-20" frameWidth="562" frameHeight="610" />
+<SubTexture name="Poip up0001" x="288" y="0" width="285" height="563" frameX="-154" frameY="-30" frameWidth="562" frameHeight="610" />
+<SubTexture name="Poip up0002" x="857" y="0" width="284" height="548" frameX="-159" frameY="-43" frameWidth="562" frameHeight="610" />
+<SubTexture name="Poip up0003" x="573" y="0" width="284" height="549" frameX="-156" frameY="-37" frameWidth="562" frameHeight="610" />
+</TextureAtlas>

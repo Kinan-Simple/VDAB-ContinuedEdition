@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="benbi.png"><SubTexture name="benbi up0000" x="847" y="0" width="218" height="266" frameX="0" frameY="0" frameWidth="218" frameHeight="266" />
+<SubTexture name="benbi up0001" x="0" y="0" width="221" height="351" frameX="0" frameY="0" frameWidth="221" frameHeight="351" />
+<SubTexture name="benbi up0002" x="221" y="0" width="220" height="295" frameX="0" frameY="0" frameWidth="220" frameHeight="295" />
+<SubTexture name="benbi left0000" x="441" y="0" width="215" height="290" frameX="0" frameY="0" frameWidth="215" frameHeight="290" />
+<SubTexture name="benbi left0001" x="240" y="641" width="215" height="235" frameX="0" frameY="0" frameWidth="215" frameHeight="235" />
+<SubTexture name="benbi left0002" x="847" y="266" width="215" height="257" frameX="0" frameY="0" frameWidth="215" frameHeight="257" />
+<SubTexture name="benbi right0000" x="408" y="351" width="222" height="282" frameX="0" frameY="0" frameWidth="222" frameHeight="282" />
+<SubTexture name="benbi right0001" x="656" y="0" width="191" height="278" frameX="0" frameY="0" frameWidth="191" frameHeight="278" />
+<SubTexture name="benbi right0002" x="0" y="351" width="196" height="290" frameX="0" frameY="0" frameWidth="196" frameHeight="290" />
+<SubTexture name="benbi up0003" x="0" y="641" width="240" height="258" frameX="0" frameY="0" frameWidth="240" frameHeight="258" />
+<SubTexture name="benbi up0004" x="455" y="641" width="241" height="219" frameX="0" frameY="0" frameWidth="241" frameHeight="219" />
+<SubTexture name="benbi up0005" x="696" y="641" width="241" height="175" frameX="0" frameY="0" frameWidth="241" frameHeight="175" />
+<SubTexture name="benbi idle0000" x="196" y="351" width="212" height="289" frameX="0" frameY="0" frameWidth="212" frameHeight="289" />
+</TextureAtlas>

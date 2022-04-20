@@ -19,9 +19,9 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Toggle Practice Mode', 'Botplay', 'Exit to menu'];
-	var menuCryAbouIt:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
-	var menuFuckYou:Array<String> = ['Resume', 'Restart Song'];
+	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Practice Mode', 'Cheatplay', 'Exit'];
+	var menuCryAbouIt:Array<String> = ['Resume', 'Restart Song', 'Exit'];
+	var menuFuckYou:Array<String> = ['Restart Song'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -37,9 +37,9 @@ class PauseSubState extends MusicBeatSubstate
 		menuItems = menuItemsOG;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'cheating' | 'unfairness' | 'disruption' | 'screwed':
+			case 'cheating' | 'unfairness' | 'disruption' | 'screwed' | 'devastation':
 	        	menuItems = menuCryAbouIt;
-			case 'opposition':
+			case 'opposition' | 'scopomania' | 'hellbreaker' | 'septuagint':
 	        	menuItems = menuFuckYou;
 		}
 
@@ -49,7 +49,7 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		difficultyChoices.push('BACK');
 
-		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
+		pauseMusic = new FlxSound().loadEmbedded(Paths.music('death'), true, true);
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
@@ -81,7 +81,7 @@ class PauseSubState extends MusicBeatSubstate
 		blueballedTxt.updateHitbox();
 		add(blueballedTxt);
 
-		practiceText = new FlxText(20, 15 + 101, 0, "PRACTICE MODE", 32);
+		practiceText = new FlxText(20, 15 + 101, 0, "PRACTICE", 32);
 		practiceText.scrollFactor.set();
 		practiceText.setFormat(Paths.font('comic-sans.ttf'), 32);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
@@ -89,7 +89,7 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.visible = PlayState.practiceMode;
 		add(practiceText);
 
-		botplayText = new FlxText(20, FlxG.height - 40, 0, "BOTPLAY", 32);
+		botplayText = new FlxText(20, FlxG.height - 40, 0, "CHEATER!!!!", 32);
 		botplayText.scrollFactor.set();
 		botplayText.setFormat(Paths.font('comic-sans.ttf'), 32);
 		botplayText.x = FlxG.width - (botplayText.width + 20);
@@ -167,11 +167,9 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (PlayState.SONG.song.toLowerCase())
 			{
-				case 'opposition':
+				case 'opposition' | 'scopomania' | 'hellbreaker' | 'septuagint':
 				switch (daSelected)
 				{
-					case "Resume":
-						close();
 					case "Restart Song":
 						CustomFadeTransition.nextCamera = transCamera;
 						MusicBeatState.resetState();
@@ -221,7 +219,7 @@ class PauseSubState extends MusicBeatSubstate
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
-				case 'Toggle Practice Mode':
+				case 'Practice':
 					PlayState.practiceMode = !PlayState.practiceMode;
 					PlayState.usedPractice = true;
 					practiceText.visible = PlayState.practiceMode;
@@ -229,11 +227,11 @@ class PauseSubState extends MusicBeatSubstate
 					CustomFadeTransition.nextCamera = transCamera;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
-				case 'Botplay':
+				case 'CheatPlay':
 					PlayState.cpuControlled = !PlayState.cpuControlled;
 					PlayState.usedPractice = true;
 					botplayText.visible = PlayState.cpuControlled;
-				case "Exit to menu":
+				case "Exit":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					CustomFadeTransition.nextCamera = transCamera;

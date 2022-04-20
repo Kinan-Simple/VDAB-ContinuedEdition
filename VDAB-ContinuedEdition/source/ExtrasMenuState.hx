@@ -32,7 +32,7 @@ class ExtrasMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['awards', 'credits', 'youtube'];
+	var optionShit:Array<String> = ['awards', 'credits', 'ripple'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -54,7 +54,13 @@ class ExtrasMenuState extends MusicBeatState
 		'backgrounds/gmaing',
 		'backgrounds/m',
 		'backgrounds/aadyian when white',
-		'backgrounds/whenthe engine be like'
+		'backgrounds/whenthe engine be like',
+		'backgrounds/darlyboxman',
+		'backgrounds/isaaclul',
+		'backgrounds/osp',
+		'backgrounds/slushX',
+		'backgrounds/voidsslime',
+		'backgrounds/voltrex'
 	];
 
 	override function create()
@@ -177,9 +183,11 @@ class ExtrasMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 				{
-					if (optionShit[curSelected] == 'youtube')
+					if (optionShit[curSelected] == 'ripple')
 					{
-						CoolUtil.browserLoad('https://www.youtube.com/channel/UC-_sZF3LthRrwKYW1CSqUMg');
+						PlayState.SONG = Song.loadFromJson("ripple-fanmade-hard", "ripple-fanmade"); // YOOOOOOO still here.
+						FlxG.switchState(new PlayState());
+						return;
 					}
 					else
 					{

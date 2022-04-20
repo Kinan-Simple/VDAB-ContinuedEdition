@@ -728,7 +728,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Persistent Cached Data',
 		'Enable Lane Underlay',
 		'Lane Underlay',
-		'Note Splashes',
 		'Note Size',
 		'Hide HUD',
 		'Hide Song Length',

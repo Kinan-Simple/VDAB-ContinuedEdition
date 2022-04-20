@@ -46,13 +46,14 @@ class FreeplayState extends MusicBeatState
 
 	private var CurrentSongIcon:FlxSprite;
 
-	private var AllPossibleSongs:Array<String> = ["dave", "purgatory", "old", "extrasandfanmades", "joke", "mods"];
+	private var AllPossibleSongs:Array<String> = ["dave", "purgatory", "old", "extrasandfanmades", "joke", "mods", "base"];
 
 	private var CurrentPack:Int = 0;
 
 	var loadingPack:Bool = false;
 
 	var songColors:Array<FlxColor> = [
+    	0xFFca1f6f, // GF		
 		0xFF000000, // DUMBASS PLACEHOLDER
 		0xFF4965FF, // DAVE
 		0xFFFF0030, // ANGEY ANGER
@@ -113,6 +114,8 @@ class FreeplayState extends MusicBeatState
 		{
 			switch (AllPossibleSongs[CurrentPack].toLowerCase())
 			{
+			    case 'base':
+				    addWeek(['Tutorial'], 0, ['gf']);				
 				case 'dave':
 					addWeek(['House', 'Insanity'], 1, ['dave']);
 					addWeek(['Polygonized'], 2,['dave3d']);
@@ -121,7 +124,8 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Splitathon'], 4,['splitathon']);
 					addWeek(['Splitathon-2'], 4,['splitathon']);					
 				case 'old':
-					addWeek(['Old-House', 'Old-Insanity', 'Old-Bonus-Song', 'Beta-Insanity', 'Beta-House'], 1, ['daveOld']);
+				    addWeek(['Old-House', 'Old Insanity'], 1, ['dave_old']);
+					addWeek(['Old-Bonus-Song', 'Beta-Insanity', 'Beta-House'], 1, ['daveOld']);
 					addWeek(['Old-Furiosity'], 2,['davesharted']);
 					addWeek(['Old-Blocked', 'Old-Corn-Theft', 'beta-maze', 'Old-Maze', 'Beta-Corn-Theft'], 3, ['bamberfunny']);
 					addWeek(['Old-Nomophobia'], 11, ['bambiGod2d']);					
@@ -158,11 +162,14 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Furiosity'], 2, ['dave3d']);
 					addWeek(['Rano'], 2, ['dave']);					
 					addWeek(['Mealie'], 3, ['bambi']);
-					addWeek(['test-song'], 3, ['splitathon']);					
+					addWeek(['test-song'], 3, ['splitathon']);
+					addWeek(['Fast-Food'], 3, ['bamburg']);
+					addWeek(['Cob'], 3, ['bambi']);															
 					addWeek(['Disruption'], 2, ['bambiPISSED']);
 					addWeek(['8-28-63'], 1, ['splitathon']);
 					addWeek(['HyperActivity'], 7, ['bandu']);
 					addWeek(['Vs-Dave-Halloween'], 3, ['gary']);
+					addWeek(['Acquaintance'], 3, ['poip']);
 					addWeek(['Jeez'], 3, ['gary']);											
 					addWeek(['Opposition B-Side'], 7, ['dataexpunged']);					
 					addWeek(['Heavenly'], 7,['bandu']);									
@@ -177,31 +184,33 @@ class FreeplayState extends MusicBeatState
 					//addWeek(['Monochrome'], 5, ['bambi3d']);
 					//addWeek(['Defeat'], 5, ['bambiRage']);
 				case 'purgatory':
+					addWeek(['Shattered'], 3, ['bambiMad']);				
 					addWeek(['Screwed'], 3, ['bambiMad']);				
 					addWeek(['OuterSpace'], 3, ['bambiMad']);				
 					addWeek(['Bugged'], 3, ['bambiMad']);										
 					addWeek(['Outrage'], 7, ['bambiRage']);
 					addWeek(['Supplanted'], 7, ['bambiRage']);																
-					addWeek(['Enshrouded'], 7, ['bambiRage']);					
-					addWeek(['Cryophobia'], 2,['dave3d']);	
+					addWeek(['Enshrouded'], 7, ['bambiRage']);
+					addWeek(['Cryophobia'], 2,['cryo']);
 					addWeek(['Nomophobia'], 11, ['bambiGod2d']);
 					addWeek(['Kalampokiphobia'], 11, ['bambiGod2d']);
 					addWeek(['Reality-Breaking'], 11, ['bambiGod2d']);
 					addWeek(['Phonophobia'], 11, ['bambiGod2d']);				
-					addWeek(['Golden'], 3, ['benson']);																																			
-					addWeek(['DELIRIUM'], 7, ['bambiHell']);
+					addWeek(['Golden'], 3, ['benson']);
 					addWeek(['Thearchy'], 7, ['bambiHell']);															
-					addWeek(['Disposition'], 11, ['bambiGod']);	
+					addWeek(['Disposition'], 11, ['bambiGod']);
+					addWeek(['Rebound'], 11, ['bambiGod']);	
 					addWeek(['Literal Insanity'], 11, ['bambi3d']);								
 					addWeek(['Tsukareta'], 11, ['bambiGod']);
 					addWeek(['Taimuresu'], 7, ['dataexpunged']);
 					addWeek(['Technology'], 9, ['bombu']);
-					addWeek(['Mass Report'], 7, ['bamber']);					
-					addWeek(['Devastation'], 9, ['bamburg']);	
+					addWeek(['Antagonism'], 7, ['dataexpunged']);					
+					addWeek(['Mass Report'], 7, ['bamber']);	
 					addWeek(['Concatenation'], 7, ['redxpoong']);
-					addWeek(['Scopomania'], 7, ['death']);					
-					addWeek(['HELLBREAKER'], 3, ['banbi']);						
-					addWeek(['Septuagint'], 3, ['earthBi']);													
+					addWeek(['Scopomania'], 7, ['death']);
+					addWeek(['HELLBREAKER'], 3, ['banbi']);
+					addWeek(['Septuagint'], 3, ['earthBi']);
+					addWeek(['Ithrekhi Yogaxekile'], 3, ['very_done']);
 					#if !debug
 					if(FlxG.save.data.hellbreakerFound)
 					#end

@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "Bombai idle"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Bombai",
+	"position": [
+		-480,
+		-210
+	],
+	"healthicon": "expungedBombu",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		0,
+		0
+	],
+	"camera_position": [
+		-300,
+		-475
+	],
+	"sing_duration": 6.1,
+	"scale": 0.999999999999999
+}

@@ -33,12 +33,14 @@ class CreditsState extends MusicBeatState
 		['Voidsslime',	 'voidsslime',			'Artist/Playtester, Moral support',             'https://www.youtube.com/channel/UClS9epoMvsI8KWYnbc9Uc6Q',	    0xFFD153FF], // + being cool
 		[''],
 		['VDABCE Creators'],
-		['NostalgiaGaming',		    'gmaing',			'Coder',			                            'https://www.youtube.com/channel/UC-_sZF3LthRrwKYW1CSqUMg',	    0xFF0000], // + a random guy		
+		['NostalgiaGaming',		    'gmaing',			'Coder',			                            'https://www.youtube.com/channel/UC-_sZF3LthRrwKYW1CSqUMg',	    0xFFFF0000], // + a random guy		
+		['M4rshL0V',		    'm4rshl0v',			'Musician & Artist',			                            'https://www.youtube.com/channel/UCyCoaWWIXA9MdDbKFgd-WxQ',	    0xFF53E52C], // + cool musician keep up the work!
+		['Philip-360-Gamer',		    'a guy',			'Charter',			                            'https://www.youtube.com/channel/UC_d6TgyhcRNKfJdwJSNsX5g',	    0xFFC30085], // + underrated				
 		['Contributors'],
 		['Pyramix',			'pyramix',			'Composed Reality Breaking and Technology, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCPKFkbgvQ5_3ETVd3l75wAA',		    0xFFFF0000],
 		['Hortas',			'hortas',			'Composed a few songs, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCvR1oxdjnB9hV-MLeH339Kg',		    0xFFFF0000], 
 		['Reginald Reborn',      'reg',	        'Made Charts for a few songs, Moral support, Purgatory Contributor',                   '',		0xFFFF0000],
-		['ShredBoi',			'shredboi',			'Composed Disposition, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCcPW37b_Gb_j0CG3U1B89YQ',		    0xFFFF0000], // holy shit disposition is such a banger i loveit
+		['ShredBoi',			'shredboi',			'Composed Disposition, and etc. Purgatory Contributor',				                        'https://www.youtube.com/channel/UCcPW37b_Gb_j0CG3U1B89YQ',		    0xFFFF0000], // holy shit disposition is such a banger i loveit
 		['rapparep lol',      'rapparep',	        'Made Gary sprites, Moral support, Purgatory Contributor',                   'https://www.youtube.com/c/rappareplol',		0xFFFF0000],
 		['CyndaquilDAC',      'cynda',	        'Programmed a few additions, Composed Supplanted, Made 2d God Bambi & Joke Bambi Remastered Sprites',                   'https://www.youtube.com/channel/UCTaq4jni33NoaI1TfMXCRcA',		0xFFFF0000],
 		['Maevings',      'maevings',	        'Composed Opposition, Purgatory Contributor',                   'https://www.youtube.com/c/Maevings',		0xFFFF0000],

@@ -9,7 +9,7 @@
 			"fps": 24,
 			"anim": "idle",
 			"loop": false,
-			"name": "bombu idle"
+			"name": "Idle"
 		},
 		{
 			"offsets": [
@@ -20,7 +20,7 @@
 			"fps": 24,
 			"anim": "singLEFT",
 			"loop": true,
-			"name": "bombu left"
+			"name": "Left"
 		},
 		{
 			"offsets": [
@@ -36,7 +36,7 @@
 			"fps": 24,
 			"anim": "singLEFT-loop",
 			"loop": true,
-			"name": "bombu left"
+			"name": "Left"
 		},
 		{
 			"offsets": [
@@ -47,7 +47,7 @@
 			"fps": 24,
 			"anim": "singUP",
 			"loop": true,
-			"name": "bombu up"
+			"name": "Up"
 		},
 		{
 			"offsets": [
@@ -58,7 +58,7 @@
 			"fps": 24,
 			"anim": "singRIGHT",
 			"loop": true,
-			"name": "bombu right"
+			"name": "Right"
 		},
 		{
 			"offsets": [
@@ -74,7 +74,7 @@
 			"fps": 24,
 			"anim": "singRIGHT-loop",
 			"loop": true,
-			"name": "bombu right"
+			"name": "Right"
 		},
 		{
 			"offsets": [
@@ -90,7 +90,7 @@
 			"fps": 24,
 			"anim": "singUP-loop",
 			"loop": true,
-			"name": "bombu up"
+			"name": "Up"
 		},
 		{
 			"offsets": [
@@ -106,7 +106,7 @@
 			"fps": 12,
 			"anim": "idle-loop",
 			"loop": true,
-			"name": "bombu idle"
+			"name": "Idle"
 		},
 		{
 			"offsets": [
@@ -117,7 +117,7 @@
 			"fps": 24,
 			"anim": "singDOWN",
 			"loop": true,
-			"name": "bombu down"
+			"name": "Down"
 		}
 	],
 	"no_antialiasing": true,

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Ripple Bambi BudobooeyYT Version.png"><SubTexture name="Ripple Bambi BudobooeyYT Version Sing Down 10000" x="0" y="0" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Down 20000" x="1828" y="0" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Down 30000" x="3656" y="0" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Down 40000" x="5484" y="0" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Down 50000" x="7312" y="0" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Left 10000" x="0" y="1671" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Left 20000" x="1828" y="1671" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Left 30000" x="3656" y="1671" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Left 40000" x="5484" y="1671" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Right 10000" x="7312" y="1671" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Right 20000" x="0" y="3342" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Right 30000" x="1828" y="3342" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Right 40000" x="3656" y="3342" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Up 10000" x="5484" y="3342" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Up 20000" x="7312" y="3342" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Up 30000" x="0" y="5013" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Up 40000" x="1828" y="5013" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Sing Up 50000" x="3656" y="5013" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 10000" x="5484" y="5013" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 20000" x="7312" y="5013" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 30000" x="0" y="6684" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 40000" x="1828" y="6684" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 50000" x="3656" y="6684" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 60000" x="5484" y="6684" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 70000" x="7312" y="6684" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 80000" x="0" y="8355" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 90000" x="1828" y="8355" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 100000" x="3656" y="8355" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+<SubTexture name="Ripple Bambi BudobooeyYT Version Idle 110000" x="5484" y="8355" width="1828" height="1671" frameX="0" frameY="0" frameWidth="1828" frameHeight="1671" />
+</TextureAtlas>

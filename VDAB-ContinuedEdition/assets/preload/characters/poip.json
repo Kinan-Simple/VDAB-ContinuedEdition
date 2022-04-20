@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "idle",
+			"loop": true,
+			"name": "Poip idle"
+		},
+		{
+			"offsets": [
+				210,
+				100
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Poip up"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Poip",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "poip",
+	"flip_x": false,
+	"healthbar_colors": [
+		200,
+		0,
+		0
+	],
+	"camera_position": [
+		-140,
+		5
+	],
+	"sing_duration": 6.1,
+	"scale": 1.5
+}

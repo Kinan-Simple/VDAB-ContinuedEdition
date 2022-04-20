@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Bombai.png"><SubTexture name="Bombai idle0000" x="1147" y="767" width="1122" height="731" frameX="-44" frameY="-86" frameWidth="1200" frameHeight="900" />
+<SubTexture name="Bombai idle0001" x="0" y="0" width="1171" height="767" frameX="-17" frameY="-78" frameWidth="1200" frameHeight="900" />
+<SubTexture name="Bombai idle0002" x="1171" y="0" width="1157" height="767" frameX="-25" frameY="-73" frameWidth="1200" frameHeight="900" />
+<SubTexture name="Bombai idle0003" x="0" y="767" width="1147" height="757" frameX="-29" frameY="-75" frameWidth="1200" frameHeight="900" />
+</TextureAtlas>
